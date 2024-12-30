@@ -1,5 +1,4 @@
 import React from "react";
-import bgWallet from "@/assets/bg_wallet.png";
 import wallet from "@/assets/wallet.png";
 import Image from "next/image";
 

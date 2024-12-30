@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import bgCalculator from "@/assets/bg_calculator.png";
 import calculator from "@/assets/calculator.png";
 import arrow from "@/assets/arrow_diagonal.svg";
 import Link from "next/link";

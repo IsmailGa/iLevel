@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import banner from "@/assets/Decor.svg";
+import banner_two from "@/assets/Decor2.svg";
 import iPhone_text from "@/assets/iPhone_16_text.svg";
 import iPhone from "@/assets/iPhone_banner.png";
 import arrow from "@/assets/arrow_diagonal_white.svg";
@@ -11,18 +12,19 @@ const Intro = () => {
     <section className="w-full h-[650px]" id="aboutus">
       <div className="relative ">
         {/* BG banner */}
-        <Image src={banner} alt="banner" className="w-full  p-[10px]" />
+        <Image src={banner} alt="banner" className="w-full p-[10px] sm:hidden lg:block md:hidden" />
+        <Image src={banner_two} alt="banner" className="w-full p-[10px] sm:hidden md:block lg:hidden" />
         {/* iPhone levetation */}
-        <Image
-          src={iPhone}
-          alt="banner"
-          className="w-full h-auto absolute top-20 z-10 "
-        />
-        <div 
-        className="bg-primary w-full h-[454px] absolute top-[50%] right-0 left-0 rounded-[35px] p-[35px] flex flex-col justify-end items-center"
+        <div
+          className={`bg-primary w-full max-xl:max-h-[550px] lg:max-h-[350px] md:max-h-[300px] absolute top-[50%] right-0 left-0 rounded-[35px] p-[35px] flex flex-col justify-end items-center`}
         >
+        <Image src={iPhone} alt="banner" className="w-full z-20 md:translate-y-[40%] lg:translate-y-[35%]" />
           {/* IPHONE 16 bg underlay */}
-          <Image src={iPhone_text} alt="banner" className="w-full " />
+          <Image
+            src={iPhone_text}
+            alt="banner"
+            className="w-full h-auto z-10"
+          />
           {/* TEXTS */}
           <div className="w-full flex justify-between items-center">
             <p className="max-w-[333px] w-full text-[16px] leading-[18px]">

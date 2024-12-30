@@ -1,13 +1,13 @@
 import React from "react";
-import wallet from "@/assets/wallet.png";
+import wallet from "@/assets/wallet_2.png";
 import Image from "next/image";
 
 const SectionTwo = () => {
   return (
-    <section className="mt-[95px] w-full flex-col flex" id="2">
-      <div className="grid lg:grid-cols-2 grid-cols-1 w-full h-full items-center">
+    <section className="mt-[95px] w-full flex-col flex " id="2">
+      <div className="grid grid-cols-2  w-full h-full items-center">
         {/* LEFT SIDE */}
-        <div className="flex-1 ">
+        <div className="md:cols-span-2 lg:1 relative">
           <h1 className="text-[36px] font-normal leading-[135%] max-w-[614px]">
             <span className="text-primary">iPhone</span> sotib
             ololmayotganingizning asosiy sababi
@@ -38,12 +38,21 @@ const SectionTwo = () => {
           </div>
         </div>
         {/* RIGHT SIDE */}
-        <div className={`flex flex-col flex-1`}>
-          
+        <div
+          className="
+          w-full
+          h-full
+          flex 
+          flex-col
+          items-center
+          justify-center
+          md:
+        "
+        >
           <Image
             src={wallet}
             alt="wallet"
-            className=""
+            className="w-full h-auto "
           />
         </div>
       </div>

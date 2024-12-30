@@ -15,7 +15,7 @@ const Navbar = () => {
             <Image src={logo} alt="logo" className="max-w-[140px] h-auto" />
           </Link>
           {/* LINSK */}
-          <ul className="lg:flex grid grid-cols-auto lg:gap-[45px] gap-1  uppercase font-[--pangram]">
+          <ul className="flex gap-[45px] uppercase font-[--pangram]">
             <li>
               <Link href="#aboutus">Biz haqimizda</Link>
             </li>

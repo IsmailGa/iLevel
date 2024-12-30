@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pangram.className} font-normal antialiased`}>
+      <body className={`${pangram.className}  font-normal antialiased`}>
         <Navbar />
-        <main className="flex flex-col">
+        <main className="flex flex-col overflow-hidden">
           <Container>{children}</Container>
         </main>
         <Footer />

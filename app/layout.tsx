@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${pangram.className}  font-normal antialiased`}>
         <Navbar />
-        <main className="flex flex-col overflow-hidden">
+        <main className="flex flex-col">
           <Container>{children}</Container>
         </main>
         <Footer />

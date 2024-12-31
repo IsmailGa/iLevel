@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const SectionTwo = () => {
   return (
-    <section className="mt-[95px] w-full flex-col flex " id="2">
-      <div className="grid grid-cols-2  w-full h-full items-center">
+    <section className="mt-[95px] w-full flex-col flex" id="2">
+      <div className="lg:grid lg:grid-cols-2 flex w-full h-full items-center relative">
         {/* LEFT SIDE */}
-        <div className="md:cols-span-2 lg:1 relative">
-          <h1 className="text-[36px] font-normal leading-[135%] max-w-[614px]">
+        <div className="w-full relative">
+          <h1 className="md:text-[36px] sm:text-[28px] font-normal leading-[135%] max-w-[614px]">
             <span className="text-primary">iPhone</span> sotib
             ololmayotganingizning asosiy sababi
           </h1>
           <br />
           <br />
-          <div className="">
-            <p className="text-[20px] leading-[135%]">
+          <div className="w-full max-w-[500px]">
+            <p className="md:text-[20px] sm:text-[18px] leading-[135%]">
               Do‘stim... <br />
               Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
               sotib ololmaslik bilan bog‘liq muammo bor. <br />
@@ -38,23 +38,11 @@ const SectionTwo = () => {
           </div>
         </div>
         {/* RIGHT SIDE */}
-        <div
-          className="
-          w-full
-          h-full
-          flex 
-          flex-col
-          items-center
-          justify-center
-          md:
-        "
-        >
-          <Image
-            src={wallet}
-            alt="wallet"
-            className="w-full h-auto "
-          />
-        </div>
+        <Image
+          src={wallet}
+          alt="wallet"
+          className="h-auto sm:w-full sm:z-[-1] sm-[400px]:absolute lg:static sm:right-[-30%] md:right-[-40%] sm:top-0 md:top-[-20%]"
+        />
       </div>
     </section>
   );

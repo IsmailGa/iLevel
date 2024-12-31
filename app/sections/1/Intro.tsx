@@ -9,37 +9,63 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <section className="w-full h-[650px]" id="aboutus">
-      <div className="relative ">
-        {/* BG banner */}
-        <Image src={banner} alt="banner" className="w-full p-[10px] sm:hidden lg:block md:hidden" />
-        <Image src={banner_two} alt="banner" className="w-full p-[10px] sm:hidden md:block lg:hidden" />
-        {/* iPhone levetation */}
-        <div
-          className={`bg-primary w-full max-xl:max-h-[550px] lg:max-h-[350px] md:max-h-[300px] absolute top-[50%] right-0 left-0 rounded-[35px] p-[35px] flex flex-col justify-end items-center`}
-        >
-        <Image src={iPhone} alt="banner" className="w-full z-20 md:translate-y-[40%] lg:translate-y-[35%]" />
-          {/* IPHONE 16 bg underlay */}
+    <section
+      className="w-full flex flex-col items-center h-[100vh] relative justify-center"
+      id="aboutus"
+    >
+      <div className="absolute bottom-[50%] z-[-1]">
+        <Image
+          src={banner}
+          alt="banner"
+          className="hidden sm:block lg:hidden w-full"
+        />
+        <Image
+          src={banner_two}
+          alt="banner"
+          className="hidden lg:block w-full"
+        />
+      </div>
+      {/* Основной блок */}
+
+      <div className="relative bg-primary w-full rounded-[35px] p-[35px] flex flex-col items-center">
+        {/* Фоновые линии */}
+
+        {/* iPhone */}
+        <div className="w-full absolute z-[3] bottom-[40%]">
           <Image
-            src={iPhone_text}
-            alt="banner"
-            className="w-full h-auto z-10"
+            src={iPhone}
+            alt="iPhone 16"
+            className="w-full object-contain"
           />
-          {/* TEXTS */}
-          <div className="w-full flex justify-between items-center">
-            <p className="max-w-[333px] w-full text-[16px] leading-[18px]">
+        </div>
+        <div className="flex flex-col lg:mt-[100px]">
+
+          {/* Текст iPhone 16 */}
+          <div className="z-[2] flex items-center justify-center">
+            <Image
+              src={iPhone_text}
+              alt="iPhone 16 Text"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* Текст и кнопка */}
+          <div className="relative z-[4] flex w-full justify-between items-center">
+            {/* Текст */}
+            <p className="max-w-[333px] text-white text-[16px] leading-[18px]">
               Va nihoyat! Endi siz boshlang&apos;ich 30% tolov va birgina
               pasport bilan xalol muddatli to&apos;lovga iphone xarid qila
               olasiz
             </p>
+            {/* Кнопка */}
             <Link
               href="/"
-              className="max-w-[186px] w-full h-[50px] p-[1px] flex justify-between items-center bg-white border-[1px] rounded-[25px] "
+              className="flex items-center justify-between bg-white border-[1px] rounded-[25px] p-[1px] w-full h-[50px] max-w-[186px]"
             >
-              <p className="m-auto text-primary uppercase text-[16px] leading-[18px] font-normal">
+              <p className="text-primary text-center w-full text-[16px] leading-[18px] font-normal">
                 Harid qilish
               </p>
-              <span className="bg-primary rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
+              <span className="flex items-center justify-center bg-primary rounded-[25px] w-[43px] h-[43px]">
                 <Image src={arrow} alt="arrow_diagonal" />
               </span>
             </Link>

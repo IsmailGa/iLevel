@@ -7,6 +7,8 @@ import {
   InstagramIcon,
   YoutubeIcon,
 } from "@/public/assets/icons";
+import rec from "@/public/assets/rectangle.png";
+import lines from "@/public/assets/2d_lines.svg";
 import React from "react";
 import { Manrope } from "next/font/google";
 import Link from "next/link";
@@ -16,10 +18,11 @@ const manropeB = Manrope({ subsets: ["latin"], weight: "500" });
 
 const Footer = () => {
   return (
-    <div className="mt-[75px] mb-[30px]">
+    <footer className="mt-[75px] pb-[30px] relative overflow-hidden">
+      <Image src={rec} alt="rect" className="max-w-[292px] w-full absolute bottom-[-25%] z-[-1] left-[5%]" />
       <div className="w-full bg-gradient-to-r from-primary to-primary/50 h-[1px]"></div>
       <Container>
-        <div className="mt-[65px] flex flex-col gap-[50px]">
+        <div className="mt-[65px] flex flex-col gap-[50px] ">
           {/* THE FIRST ROW */}
           <div className="flex justify-between ">
             <Image src={arrowUp} alt="arrow up" />
@@ -56,7 +59,7 @@ const Footer = () => {
             <div className="flex flex-col gap-[35px]">
               <ul className="flex gap-[15px]">
                 {/* TELEGRAM */}
-                <li className="border-[1px] border-white p-[11px] backdrop-blur-3xl bg-white/10 rounded-full">
+                <li className="border-[1px] border-white p-[11px] backdrop-blur-sm bg-white/10 rounded-full">
                   <Link
                     href="telegram.org"
                     className="flex justify-center items-center"
@@ -65,7 +68,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 {/* INSTAGRAM */}
-                <li className="border-[1px] border-white p-[11px] backdrop-blur-3xl bg-white/10 rounded-full">
+                <li className="border-[1px] border-white p-[11px] backdrop-blur-sm bg-white/10 rounded-full">
                   <Link
                     href="instagram.com"
                     className="flex justify-center items-center"
@@ -74,7 +77,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 {/* YOUTUBE */}
-                <li className="border-[1px] border-white p-[11px] backdrop-blur-3xl bg-white/10 rounded-full">
+                <li className="border-[1px] border-white p-[11px] backdrop-blur-sm bg-white/10 rounded-full">
                   <Link
                     href="youtube.com"
                     className="flex justify-center items-center"
@@ -105,7 +108,8 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-    </div>
+      <Image src={lines} alt="lines" className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] right-0" />
+    </footer>
   );
 };
 

@@ -7,13 +7,13 @@ import Link from "next/link";
 const SectionFour = () => {
   return (
     <section className="mt-[75px]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center" id="4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center relative" id="4">
         {/* IMAGE */}
         <div className="flex flex-col flex-1">
           <Image
             src={calculator}
             alt="calculator"
-            className="w-full h-auto"
+            className="w-full h-auto min-[400px]:w-[518px] min-[400px]:z-[-1] min-[400px]:absolute lg:static top-[-50%]"
           />
         </div>
         {/* IMAGE */}

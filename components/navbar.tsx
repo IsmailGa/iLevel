@@ -10,79 +10,81 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mt-[35px] h-[50px] w-full flex justify-center items-center">
+    <div className="relative mt-[35px] w-full flex justify-center items-center">
       <Container>
-        <div className="flex">
-          <nav className="w-full flex justify-between items-center gap-0 md:gap-[20px]">
-            {/* LOGO */}
-            <Link href="/">
-              <Image
-                src={logo}
-                alt="logo"
-                className={`max-w-[140px] h-auto md:static  ${
-                  open ? "sm:fixed left-5 z-[60]" : ""
-                } `}
-              />
-            </Link>
-            <div
-              className={` md:flex sm:hidden md:static${
-                open
-                  ? "sm:fixed sm:w-full sm:h-full sm:z-50 top-0 left-0 bottom-0 right-[50%]  sm:bg-[#070529] sm:flex sm:flex-col sm:justify-center sm:items-center"
-                  : ""
+        <div className="flex justify-between items-center">
+          {/* LOGO */}
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="logo"
+              className={`max-w-[140px] h-auto z-[60] ${
+                open ? "fixed top-[35px] left-5" : ""
               }`}
-            >
-              <ul
-                className={`sm:container sm:flex md:flex-row md:gap-[45px] sm:gap-[25px] w-full sm:justify-center sm:items-center md:items-baseline md:justify-normal uppercase font-[--pangram] sm:flex-col`}
-              >
-                <li className="">
-                  <Link href="#aboutus">Biz haqimizda</Link>
-                </li>
-                <li>
-                  <Link href="#catalog">Catalog</Link>
-                </li>
-                <li>
-                  <Link href="#promotion">Aksiyalar</Link>
-                </li>
-                <li>
-                  <Link href="#contacts">Kontaktalar</Link>
-                </li>
-              </ul>
-              {/* CONTACT US LINK*/}
-              <Link
-                href="#contacts"
-                className="max-w-[165px] w-full h-[50px] p-[1px] flex justify-between items-center border-white border-[1px] rounded-[25px]"
-              >
-                <p className="flex justify-center items-center w-full">
-                  Bog&apos;lanish
-                </p>
-                <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
-                  <Image src={arrow} alt="arrow_diagonal" />
-                </span>
-              </Link>
-              {/* LIN */}
-            </div>
-          </nav>
+            />
+          </Link>
+
+          {/* BURGER MENU */}
           <div
-            className={`right-5 md:static md:hidden ${
-              open ? "fixed  z-[50]" : ""
+            className={`md:hidden flex items-center justify-center cursor-pointer z-[60] ${
+              open ? "fixed top-[35px] right-5" : ""
             }`}
             onClick={() => setOpen((prev) => !prev)}
           >
             <div className="w-[36px] h-[36px] rounded-full border-[1px] border-white flex items-center justify-center">
               <div className="flex flex-col justify-between items-center gap-[5px] transition-transform duration-300">
                 <span
-                  className={`block  w-[16px] h-[2px] bg-white ${
+                  className={`block w-[16px] h-[2px] bg-white transition-all ${
                     open ? "opacity-0" : ""
                   }`}
                 ></span>
                 <span
-                  className={`block  w-[16px] h-[2px] bg-white ${
-                    open ? "rotate-60 " : ""
+                  className={`block w-[16px] h-[2px] bg-white transition-all ${
+                    open ? "rotate-[45deg] translate-y-[1px]" : ""
                   }`}
                 ></span>
-                <span className={`block  w-[16px] h-[2px] bg-white `}></span>
+                <span
+                  className={`block w-[16px] h-[2px] bg-white transition-all ${
+                    open ? "rotate-[-45deg] -translate-y-[6px]" : ""
+                  }`}
+                ></span>
               </div>
             </div>
+          </div>
+
+          {/* NAV LINKS */}
+          <div
+            className={`fixed top-0 left-0 w-full h-full bg-[#070529] z-50 flex flex-col items-center justify-center gap-[25px] transform transition-transform duration-300 ${
+              open ? "translate-x-0" : "translate-x-full"
+            } md:static md:flex md:flex-row md:gap-[45px] md:translate-x-0 md:bg-transparent`}
+          >
+            <ul className="uppercase text-white font-[--pangram] flex flex-col md:flex-row md:gap-[45px] items-center">
+              <li>
+                <Link href="#aboutus">Biz haqimizda</Link>
+              </li>
+              <li>
+                <Link href="#catalog">Catalog</Link>
+              </li>
+              <li>
+                <Link href="#promotion">Aksiyalar</Link>
+              </li>
+              <li>
+                <Link href="#contacts">Kontaktalar</Link>
+              </li>
+            </ul>
+
+            {/* CONTACT US LINK */}
+            <Link
+              href="#contacts"
+              className="max-w-[165px] w-full h-[50px] p-[1px] flex justify-between items-center border-white border-[1px] rounded-[25px] mt-5 md:mt-0"
+            >
+              <p className="flex justify-center items-center w-full">
+                Bog&apos;lanish
+              </p>
+              <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
+                <Image src={arrow} alt="arrow_diagonal" />
+              </span>
+            </Link>
           </div>
         </div>
       </Container>

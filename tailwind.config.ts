@@ -12,7 +12,7 @@ const config: Config = {
         primary: "#9357FF",
       },
       screens: {
-        'sm': '360px',  
+        // 'sm': '360px',  
       }
     },
   },

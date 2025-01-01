@@ -12,7 +12,7 @@ import SectionNine from "./sections/9/SectionNine";
 
 export default function Home() {
   return (
-    <div className="mt-[120px] w-full">
+    <div className="md:pt-[60px] pt-[45px] w-full">
       <Intro />
       <SectionTwo />
       <SectionThree />

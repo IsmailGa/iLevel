@@ -38,7 +38,7 @@ const SectionEleven = () => {
               type="text"
               name="name"
               id="name"
-              className="border-0 text-[18px] leading-[20px] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
+              className="border-0 text-[18px] leading-[135%] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
               placeholder="Ismi sharifingiz"
               required
             />
@@ -46,7 +46,7 @@ const SectionEleven = () => {
               type="tel"
               name="number"
               id="number"
-              className="border-0 text-[18px] leading-[20px] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
+              className="border-0 text-[18px] leading-[135%] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
               placeholder="Telefon raqamingiz  (+998 XX XXX-XX-XX)"
               pattern="\+998[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"
               required
@@ -55,7 +55,7 @@ const SectionEleven = () => {
               type="text"
               name="location"
               id="location"
-              className="border-0 text-[18px] leading-[20px] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
+              className="border-0 text-[18px] leading-[135%] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placholder-primary"
               placeholder="Shahringiz yoki yashash joyingiz"
               required
             />

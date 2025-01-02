@@ -15,7 +15,7 @@ const SectionTwo = () => {
           <br />
           <br />
           <div className="w-full max-w-[500px]">
-            <p className="md:text-[20px] max-md:text-[18px] leading-[135%]">
+            <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%]">
               Do‘stim... <br />
               Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
               sotib ololmaslik bilan bog‘liq muammo bor. <br />

@@ -8,12 +8,12 @@ const SectionEight = () => {
   return (
     <section className="w-full mt-[75px] flex flex-col" id="8">
       <div className="bg-primary rounded-[25px] p-[35px] grid gap-[25px] relative">
-        <h1 className="text-[36px] leading-[41px] max-w-[576px]">
+        <h1 className="md:text-[36px] text-[28px] leading-[135%] max-w-[576px]">
           Har oy 1000+ dan ortiq mijozlarga xizmat ko’rsatamiz
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[25px] lg:gap-0 items-center">
-          <p>
+          <p className="md:text-[20px] text-[18px] leading-[135%]">
             iLevel do’koniga x yilda asos solganmiz va har oy minglab mijozlarga
             xizmat ko’rsatamiz
           </p>

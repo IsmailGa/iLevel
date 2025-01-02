@@ -7,13 +7,13 @@ import Image from "next/image";
 const SectionSix = () => {
   return (
     <section className="w-full mt-[75px] flex flex-col" id="6">
-      <div className="bg-primary rounded-[25px] p-[35px] grid gap-[25px] relative">
-        <h1 className="text-[36px] leading-[41px] max-w-[576px]">
+      <div className="bg-primary rounded-[25px] md:p-[35px] p-[25px] grid gap-[25px] relative">
+        <h1 className="md:text-[36px] text-[28px] leading-[135%] max-w-[576px]">
           Kuting oling, ilevel apple gadjetlar do’koni
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[25px] lg:gap-0 items-center">
-          <p>
+          <p className="md:text-[20px] text-[18px] leading-[135%]">
             ilevel do’konidan siz boshlang’ich 30% to’lov va birgina pasport
             bilan istalgan turdagi apple gadjetlarini xarid qilishingiz mumkin
           </p>

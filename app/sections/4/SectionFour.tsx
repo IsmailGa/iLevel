@@ -22,11 +22,11 @@ const SectionFour = () => {
         {/* IMAGE */}
         {/* TEXTS */}
         <div className="flex-col flex gap-[35px] items-end">
-          <h2 className="text-[36px] text-end leading-[135%] max-md:max-w-[362px]">
+          <h2 className="md:text-[36px] text-[28px] text-end leading-[135%] max-md:max-w-[362px]">
             <span className="text-primary ">Xo‘sh</span>, iphonelarni qanday
             qilib bo’lib to’lashga olsa bo’ladi?
           </h2>
-          <p className="text-end leading-[135%] text-[20px] max-md:max-w-[362px]">
+          <p className="text-end leading-[135%] text-[20px] md:text-[18px] max-md:max-w-[362px]">
             Sizni bo’lib to’lashga iphone xarid qilishdan to‘sib turgan narsa
             bu.. <br /> Bo’lib to’lashga telefon xarid qilmoqchi bo’lganingizda
             sizdan Toshkent propiska, kartadagi aylanma va rasmiy ish joy

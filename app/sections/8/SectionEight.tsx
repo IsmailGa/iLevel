@@ -1,10 +1,13 @@
 import React from "react";
 import thousand from "@/assets/thousand-plus.svg";
 import arrow from "@/assets/arrow_diagonal_white.svg";
-import Link from "next/link";
 import Image from "next/image";
 
-const SectionEight = () => {
+type SetOpenType = {
+  setOpen: (value: boolean) => void;
+};
+
+const SectionEight = ({ setOpen }: SetOpenType) => {
   return (
     <section className="w-full mt-[75px] flex flex-col" id="8">
       <div className="bg-primary rounded-[25px] p-[35px] grid gap-[25px] relative">
@@ -18,8 +21,8 @@ const SectionEight = () => {
             xizmat ko’rsatamiz
           </p>
 
-          <Link
-            href="/"
+          <button
+            onClick={() => setOpen(true)}
             className="justify-self-end z-[50] max-lg:justify-self-start flex items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
           >
             <p className="text-primary text-center px-[20px] text-[16px] uppercase">
@@ -28,7 +31,7 @@ const SectionEight = () => {
             <span className="flex items-center justify-center bg-primary rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
               <Image src={arrow} alt="arrow_diagonal" />
             </span>
-          </Link>
+          </button>
         </div>
         <Image
           src={thousand}

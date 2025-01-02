@@ -64,16 +64,16 @@ const SectionTen: React.FC = () => {
               </h2>
 
               {/* LINE ICON */}
-              <div className="relative w-[30px] h-[20px] flex items-center justify-center">
+              <div className="relative md:w-[30px] md:h-[20px] w-[21px] h-[21px] flex items-center justify-center">
                 {/* UPPER LINE */}
                 <span
-                  className={`absolute w-[30px] h-[2px] transition-transform duration-300 ${
+                  className={`absolute md:w-[30px] w-[21px] h-[2px] transition-transform duration-300 ${
                     openIndex === index ? "rotate-0 bg-primary" : "bg-white"
                   }`}
                 ></span>
                 {/* UNDER LINE */}
                 <span
-                  className={`absolute w-[30px] h-[2px] transition-all duration-300 ${
+                  className={`absolute md:w-[30px] w-[21px] h-[2px] transition-all duration-300 ${
                     openIndex === index ? "opacity-0" : "rotate-90 bg-white"
                   }`}
                 ></span>

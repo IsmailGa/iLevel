@@ -75,7 +75,7 @@ const SectionSeven = () => {
         </div>
         {/* BIG CARD */}
         <div
-          className="relative group overflow-hidden cursor-pointer bg-center bg-cover w-full border-primary h-[420px] border-[1px] rounded-[25px] md:px-[30px] md:py-[30px] px-[25px] py-[25px] md:col-span-2 col-span-1"
+          className="relative group overflow-hidden cursor-pointer bg-center bg-cover w-full border-primary h-[420px] border-[1px] rounded-[25px] md:px-[30px] md:pt-[30px] px-[25px] pt-[25px] md:col-span-2 col-span-1"
           style={{
             backgroundImage: "url('/assets/cards/accesories.png')",
           }}

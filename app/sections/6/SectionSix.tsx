@@ -31,11 +31,13 @@ const SectionSix = () => {
           </Link>
         </div>
 
-        <Image
-          src={thirtyBg}
-          alt="thirty bg"
-          className="absolute right-0 top-[20%] z-1"
-        />
+        <div className="absolute md:right-0 max-md:max-lg:left-[25px] md:top-[20%] top-[30%] z-1">
+          <Image
+            src={thirtyBg}
+            alt="thirty bg"
+            className=""
+          />
+        </div>
       </div>
     </section>
   );

@@ -12,11 +12,11 @@ const SectionFour = () => {
         id="4"
       >
         {/* IMAGE */}
-        <div className="flex flex-col flex-1 md:opacity-100 opacity-50">
+        <div className="flex flex-col flex-1 max-md:z-[-1] md:opacity-100 opacity-50">
           <Image
             src={calculator}
             alt="calculator"
-            className="w-full h-auto max-md:w-[518px] max-md:z-[-1] max-md:absolute lg:static max-md:top-[-10%] md:left-0 max-md:left-[-20%]"
+            className="w-full h-auto max-md:w-[518px]  max-md:absolute lg:static max-md:top-[-10%] md:left-0 max-md:left-[-20%]"
           />
         </div>
         {/* IMAGE */}

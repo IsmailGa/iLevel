@@ -12,6 +12,18 @@ const Modal = ({
   setOpen: (value: boolean) => void;
   open: boolean;
 }) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "static";
+    }
+
+    return () => {
+      document.body.style.position = "static";
+    };
+  }, [open]);
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     const form = event.target as HTMLFormElement;
     if (!form.checkValidity()) {
@@ -20,23 +32,12 @@ const Modal = ({
     }
   };
 
-  if (!open) return null;
-
-  useEffect(() => {
-    if (open) {
-      document.body.style.position = "fixed";
-    } else {
-      document.body.style.position = "static";
-    }
-    return () => {
-      document.body.style.position = "static";
-    };
-  }, [open]);
-
   const handleClick = () => {
     setOpen(false);
     document.body.style.position = "static";
   };
+
+  if (!open) return null;
 
   return (
     <div className="fixed inset-0 bg-[#070529] w-full flex justify-center items-center z-[100]">

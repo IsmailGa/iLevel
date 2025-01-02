@@ -28,7 +28,7 @@ const Intro = () => {
         {/* Фоновые линии */}
 
         {/* iPhone */}
-        <div className="absolute w-full z-[3] lg:w-[94%] md:w-[105%] md:top-[-18%] md:translate-y-[0] top-[50%] translate-y-[-50%] w-[114%]">
+        <div className="absolute w-full z-[3] lg:w-[94%] md:w-[105%] md:top-[-18%] md:translate-y-[0] top-[50%] translate-y-[-50%] max-md:w-[114%]">
           <Image
             src={iPhone}
             alt="iPhone 16"

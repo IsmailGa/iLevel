@@ -32,11 +32,13 @@ const SectionThree = () => {
       {/* CARDS */}
       {/* LINK */}
       <Link
-        href="#contacts"
-        className="max-w-[170px] w-full h-[50px] flex p-[1px] justify-between items-center border-white border-[1px] rounded-[25px]"
+        href="/"
+        className="self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
       >
-        <p className="m-auto text-[16px] leading-[135%]">Harid qilish</p>
-        <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
+        <p className="text-white text-center px-[20px] text-[16px]">
+          Harid qilish
+        </p>
+        <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
           <Image src={arrow} alt="arrow_diagonal" />
         </span>
       </Link>

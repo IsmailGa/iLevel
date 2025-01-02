@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import arrow from "@/assets/arrow_diagonal.svg";
+import arrow from "@/assets/arrow_diagonal_white.svg";
 import iphone from "@/assets/cards/iphones.png";
 import imac from "@/assets/cards/imac.png";
 import macbooks from "@/assets/cards/macbooks.png";
@@ -9,7 +9,10 @@ import iwatch from "@/assets/cards/iwatch.png";
 
 const SectionSeven = () => {
   return (
-    <section className={`mt-[75px] w-full flex flex-col gap-[35px]`} id="catalog">
+    <section
+      className={`mt-[75px] w-full flex flex-col gap-[35px]`}
+      id="catalog"
+    >
       <h1 className="text-[36px] leading-[41px] max-w-[576px] text-end self-end">
         <span className="text-primary">iLevel</span> do’konidan siz nimalarni
         xarid qilishingiz mumkin?
@@ -22,11 +25,10 @@ const SectionSeven = () => {
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
               iPhonelarni yangi va ishlatilganlarini
             </h1>
-            <Link href="/">
-              <span className="bg-white rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+
+            <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
           </div>
           <Image src={iphone} alt="iphone" className="z-10" />
 
@@ -39,11 +41,9 @@ const SectionSeven = () => {
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
               iPhonelarni yangi va ishlatilganlarini
             </h1>
-            <Link href="/">
-              <span className="bg-white rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
           </div>
           <Image src={macbooks} alt="iphone" className="" />
           <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -54,11 +54,9 @@ const SectionSeven = () => {
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
               iPhonelarni yangi va ishlatilganlarini
             </h1>
-            <Link href="/">
-              <span className="bg-white rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
           </div>
           <Image src={imac} alt="iphone" className="" />
 
@@ -71,11 +69,9 @@ const SectionSeven = () => {
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
               iPhonelarni yangi va ishlatilganlarini
             </h1>
-            <Link href="/">
-              <span className="bg-white rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
           </div>
           <Image src={iwatch} alt="iphone" className="" />
 
@@ -93,11 +89,9 @@ const SectionSeven = () => {
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
               iPhonelarni yangi va ishlatilganlarini
             </h1>
-            <Link href="/">
-              <span className="bg-white rounded-[25px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
           </div>
 
           {/* Overlay */}

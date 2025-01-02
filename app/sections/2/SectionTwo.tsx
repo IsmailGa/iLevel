@@ -8,14 +8,14 @@ const SectionTwo = () => {
       <div className="lg:grid lg:grid-cols-2 flex w-full h-full items-center relative">
         {/* LEFT SIDE */}
         <div className="w-full relative">
-          <h1 className="md:text-[36px] sm:text-[28px] font-normal leading-[135%] max-w-[614px]">
+          <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[135%] max-w-[614px]">
             <span className="text-primary">iPhone</span> sotib
             ololmayotganingizning asosiy sababi
           </h1>
           <br />
           <br />
           <div className="w-full max-w-[500px]">
-            <p className="md:text-[20px] sm:text-[18px] leading-[135%]">
+            <p className="md:text-[20px] max-md:text-[18px] leading-[135%]">
               Do‘stim... <br />
               Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
               sotib ololmaslik bilan bog‘liq muammo bor. <br />
@@ -41,7 +41,7 @@ const SectionTwo = () => {
         <Image
           src={wallet}
           alt="wallet"
-          className="h-auto sm:w-full sm:z-[-1] sm-[400px]:absolute lg:static sm:right-[-30%] md:right-[-40%] sm:top-0 md:top-[-20%]"
+          className="h-auto max-md:w-full max-md:z-[-1] max-md:absolute lg:static max-md:right-[-30%] md:right-[-40%] max-md:top-0 md:top-[-20%]"
         />
       </div>
     </section>

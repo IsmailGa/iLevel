@@ -14,7 +14,7 @@ const SectionEleven = () => {
   };
 
   return (
-    <section className="flex flex-col w-full mt-[75px] ">
+    <section className="flex flex-col w-full mt-[75px]" id="contacts">
       <div className="grid lg:grid-cols-2 grid-cols-1 bg-primary p-[35px] items-center gap-[35px] rounded-[25px]">
         {/* LEFT SIDE DESCRIPTION */}
         <div className="flex flex-col justify-between relative gap-[72px]">

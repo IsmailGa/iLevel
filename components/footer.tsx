@@ -119,7 +119,7 @@ const Footer = () => {
                   "uppercase text-[16px] font-[500]  " + manropeB.className
                 }
               >
-                Разработано ABC
+                Разработано VBS
               </h1>
             </div>
           </div>

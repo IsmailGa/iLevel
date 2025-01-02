@@ -48,29 +48,22 @@ const SectionNine = () => {
         {/* LEFT */}
 
         <div className="relative inline-block p-[1px] bg-gradient-to-r from-primary rounded-[25px]">
-          <div className="p-[30px] bg-[#070529] rounded-[25px] w-full h-full flex flex-col lg:justify-between lg:items-end lg:gap-0 gap-[25px]">
+          <div className="p-[30px] bg-[#070529] rounded-[25px] w-full h-full flex flex-col lg:justify-between lg:items-end">
             <h1 className="text-[36px] leading-[41px]">
               Aksincha bo’lsa, bu taklif siz uchun
             </h1>
+           
             <Link
-              href="#contacts"
-              className={`
-            max-w-[235px]
-            w-full h-[50px] 
-            flex 
-            p-[1px] 
-            justify-between 
-        border-white
-            border-[1px] 
-            rounded-[25px]  
-            z-10
-           `}
-            >
-              <p className="m-auto">Taklifdan foydalanish</p>
-              <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            href="/"
+            className="justify-self-end max-lg:max-xl:self-start max-lg:max-xl: mt-[100px] z-[50] max-lg:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+          >
+            <p className="text-white text-center px-[20px] text-[16px]">
+            Taklifdan foydalanish
+            </p>
+            <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+              <Image src={arrow} alt="arrow_diagonal" />
+            </span>
+          </Link>
           </div>
         </div>
       </div>

@@ -1,14 +1,25 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "./container";
 import logo from "@/assets/logo_white.png";
 import arrow from "@/assets/arrow_diagonal.svg";
-import decor_lines from "@/public/assets/2d_lines.svg"
+import decor_lines from "@/public/assets/2d_lines.svg";
 import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "static";
+    }
+    return () => {
+      document.body.style.position = "static";
+    };
+  }, [open]);
 
   return (
     <div className="py-[14px] sm:py-[25px] md:py-[35px] w-full flex justify-between items-center">
@@ -55,35 +66,55 @@ const Navbar = () => {
               open ? "visibile opacity-1" : "invisible opacity-0"
             } lg:hidden`}
           >
-            <div  
+            <div
               className={`z-[1] w-full mx-auto sm:px-[30px] px-[20px]`}
               onClick={() => setOpen((prev) => !prev)}
             >
               <ul className="text-white font-[--pangram] flex flex-col w-full gap-[24px] items-center">
                 <li className="flex w-full">
-                  <Link className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]" href="#aboutus">Biz haqimizda</Link>
+                  <Link
+                    className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]"
+                    href="#aboutus"
+                  >
+                    Biz haqimizda
+                  </Link>
                 </li>
                 <li className="flex w-full">
-                  <Link className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]" href="#catalog">Catalog</Link>
+                  <Link
+                    className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]"
+                    href="#catalog"
+                  >
+                    Catalog
+                  </Link>
                 </li>
                 <li className="flex w-full">
-                  <Link className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]" href="#promotion">Aksiyalar</Link>
+                  <Link
+                    className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]"
+                    href="#promotion"
+                  >
+                    Aksiyalar
+                  </Link>
                 </li>
                 <li className="flex w-full">
-                  <Link className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]" href="#contacts">Kontaktalar</Link>
+                  <Link
+                    className="flex flex-1 h-[50px] justify-center items-center border-white border-[1px] rounded-[25px]"
+                    href="#contacts"
+                  >
+                    Kontaktalar
+                  </Link>
                 </li>
                 <li className="flex w-full">
-                <Link
-                  href="#contacts"
-                  className="relative flex flex-1 h-[50px] p-[3px] items-center border-white border-[1px] rounded-[25px]"
-                >
-                  <p className="flex flex-1 justify-center items-center px-[20px]">
-                    Bog&apos;lanish
-                  </p>
-                  <span className="absolute bg-white rounded-[25px] w-[43px] h-[43px] shrink-0 flex justify-center items-center right-[3px]">
-                    <Image src={arrow} alt="arrow_diagonal" />
-                  </span>
-                </Link>
+                  <Link
+                    href="#contacts"
+                    className="relative flex flex-1 h-[50px] p-[3px] items-center border-white border-[1px] rounded-[25px]"
+                  >
+                    <p className="flex flex-1 justify-center items-center px-[20px]">
+                      Bog&apos;lanish
+                    </p>
+                    <span className="absolute bg-white rounded-[25px] w-[43px] h-[43px] shrink-0 flex justify-center items-center right-[3px]">
+                      <Image src={arrow} alt="arrow_diagonal" />
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -91,24 +122,41 @@ const Navbar = () => {
               <Image src={decor_lines} alt="decor_lines" />
             </div>
           </div>
-          
 
           {/* NAV LINKS */}
-          <div
-            className={`lg:flex hidden`}
-          >
+          <div className={`lg:flex hidden`}>
             <ul className="uppercase text-white font-[--pangram] flex flex-row gap-[1px]">
               <li>
-                <Link className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300" href="#aboutus">Biz haqimizda</Link>
+                <Link
+                  className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"
+                  href="#aboutus"
+                >
+                  Biz haqimizda
+                </Link>
               </li>
               <li>
-                <Link className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300" href="#catalog">Catalog</Link>
+                <Link
+                  className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"
+                  href="#catalog"
+                >
+                  Catalog
+                </Link>
               </li>
               <li>
-                <Link className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300" href="#promotion">Aksiyalar</Link>
+                <Link
+                  className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"
+                  href="#promotion"
+                >
+                  Aksiyalar
+                </Link>
               </li>
               <li>
-                <Link className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300" href="#contacts">Kontaktalar</Link>
+                <Link
+                  className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"
+                  href="#contacts"
+                >
+                  Kontaktalar
+                </Link>
               </li>
             </ul>
           </div>
@@ -121,7 +169,11 @@ const Navbar = () => {
               Bog&apos;lanish
             </p>
             <span className="bg-white rounded-[25px] w-[43px] h-[43px] shrink-0 flex justify-center items-center">
-              <Image src={arrow} alt="arrow_diagonal" className="group-hover:rotate-[45deg] transition-all duration-300"/>
+              <Image
+                src={arrow}
+                alt="arrow_diagonal"
+                className="group-hover:rotate-[45deg] transition-all duration-300"
+              />
             </span>
           </Link>
         </div>

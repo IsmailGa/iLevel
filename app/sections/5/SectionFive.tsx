@@ -1,5 +1,10 @@
 import React from "react";
-import { IconWallet, Paper, Profile, SquareTick } from "@/public/assets/icons.js";
+import {
+  IconWallet,
+  Paper,
+  Profile,
+  SquareTick,
+} from "@/public/assets/icons.js";
 import arrow from "@/assets/arrow_diagonal.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,26 +19,36 @@ const SectionFive = () => {
       {/* CARDS */}
       <div className="grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-[25px] items-center">
         {/* CARD ONE */}
-        <div className="border-primary bg-primary/10 border-[1px] rounded-[25px] p-[25px] flex flex-col gap-[60px] lg:mb-[70px] ">
-          <IconWallet />
-          <p className="text-[20px] leading-[22px]">Boshlang’ich 30% to’lov</p>
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mb-[70px] md:mt-[-38px]">
+          <div className="block max-w-[32px] max-h-[32px]">
+            <IconWallet />
+          </div>
+          <p className="block text-[20px] leading-[22px]">
+            Boshlang’ich 30% to’lov
+          </p>
         </div>
         {/* CARD TWO*/}
-        <div className="border-primary bg-primary/10 border-[1px] rounded-[25px] p-[25px] flex flex-col gap-[60px] lg:mt-[70px] md:">
-          <Paper />
-          <p className="text-[20px] leading-[22px]">Birgina pasport</p>
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mt-[70px] md:mt-[38px]">
+          <div className="block max-w-[32px] max-h-[32px]">
+            <Paper />
+          </div>
+          <p className="block text-[20px] leading-[22px]">Birgina pasport</p>
         </div>
         {/* CARD THREE*/}
-        <div className="border-primary bg-primary/10 border-[1px] rounded-[25px] p-[25px] flex flex-col gap-[60px] lg:mb-[70px]">
-          <SquareTick />
-          <p className="text-[20px] leading-[22px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mb-[70px] md:mt-[-38px]">
+          <div className="block max-w-[32px] max-h-[32px]">
+            <SquareTick />
+          </div>
+          <p className="block text-[20px] leading-[22px]">
             Hech qanday mibdan qarzdorlik yo’qligi
           </p>
         </div>
         {/* CARD FOUR*/}
-        <div className="border-primary bg-primary/10 border-[1px] rounded-[25px] p-[25px] flex flex-col gap-[60px] lg:mt-[70px] md:">
-          <Profile />
-          <p className="text-[20px] leading-[22px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mt-[70px] md:mt-[38px]">
+          <div className="block max-w-[32px] max-h-[32px]">
+            <Profile />
+          </div>
+          <p className="block text-[20px] leading-[22px] ">
             Va 18 yoshdan yuqori bo’lsangiz bas
           </p>
         </div>
@@ -45,24 +60,13 @@ const SectionFive = () => {
           boshingizni og’ritmaymiz
         </p>
         <Link
-          href="#contacts"
-          className={`
-          max-w-[170px] 
-          w-full 
-          h-[50px] 
-          flex 
-          p-[1px] 
-          justify-between 
-          items-center 
-          border-white 
-          border-[1px] 
-          rounded-[25px] 
-          lg:justify-self-end
-
-          `}
+          href="/"
+          className="justify-self-end max-md:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
         >
-          <p className="m-auto">Harid qilish</p>
-          <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
+          <p className="text-white text-center px-[20px] text-[16px]">
+            Harid qilish
+          </p>
+          <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
             <Image src={arrow} alt="arrow_diagonal" />
           </span>
         </Link>

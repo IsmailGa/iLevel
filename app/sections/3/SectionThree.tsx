@@ -7,23 +7,23 @@ const SectionThree = () => {
   return (
     <section className="mt-[75px] flex-col flex gap-[35px]" id="3">
       {/* TITLE */}
-      <h1 className="text-[36px] leading-[135%]">
+      <h1 className="md:text-[36px] text-[28px] leading-[135%]">
         <span className="text-primary ">Bu</span> muammolar sabab…
       </h1>
       {/* CARDS */}
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-[25px]">
         {/* FIRST CARD */}
         <div className="border-primary border-[1px] rounded-[25px] bg-primary/10 p-[25px] grid gap-[25px]">
-          <h2 className="text-primary text-[28px]">(1)</h2>
-          <p className="text-[20px] leading-[135%]">
+          <h2 className="text-primary md:text-[28px] text-[24px]">(1)</h2>
+          <p className="md:text-[20px] text-[18px] leading-[135%]">
             Hali ham shu qotadigan telefoningizni ishlatib yurishga majbur
             bo’lyapsiz
           </p>
         </div>
         {/* SECOND CARD */}
         <div className="border-primary border-[1px] rounded-[25px] bg-primary/10 p-[25px] grid gap-[25px]">
-          <h2 className="text-primary text-[28px]">(2)</h2>
-          <p className="text-[20px] leading-[135%]">
+          <h2 className="text-primary md:text-[28px] text-[24px]">(2)</h2>
+          <p className="md:text-[20px] text-[18px] leading-[135%]">
             Iphone yangi modellari chiqsa ham siz eski modellarini ishlatib
             yuribsiz
           </p>

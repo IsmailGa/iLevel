@@ -12,7 +12,7 @@ import Link from "next/link";
 const SectionFive = () => {
   return (
     <section className="mt-[75px] w-full flex flex-col gap-[35px]" id="5">
-      <h1 className="text-[36px] leading-[41px] max-w-[613px]">
+      <h1 className="md:text-[36px] text-[28px] leading-[41px] max-w-[613px]">
         <span className="text-primary">iPhonelarni</span> hech qanday bosh
         og’riqlarsiz sotib olish uchun nima qilish kerak?
       </h1>
@@ -23,7 +23,7 @@ const SectionFive = () => {
           <div className="block max-w-[32px] max-h-[32px]">
             <IconWallet />
           </div>
-          <p className="block text-[20px] leading-[22px]">
+          <p className="block md:text-[20px] text-[18px] leading-[135%]">
             Boshlang’ich 30% to’lov
           </p>
         </div>
@@ -32,14 +32,14 @@ const SectionFive = () => {
           <div className="block max-w-[32px] max-h-[32px]">
             <Paper />
           </div>
-          <p className="block text-[20px] leading-[22px]">Birgina pasport</p>
+          <p className="block md:text-[20px] text-[18px] leading-[135%]">Birgina pasport</p>
         </div>
         {/* CARD THREE*/}
         <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mb-[70px] md:mt-[-38px]">
           <div className="block max-w-[32px] max-h-[32px]">
             <SquareTick />
           </div>
-          <p className="block text-[20px] leading-[22px]">
+          <p className="block md:text-[20px] text-[18px] leading-[135%]">
             Hech qanday mibdan qarzdorlik yo’qligi
           </p>
         </div>
@@ -48,14 +48,14 @@ const SectionFive = () => {
           <div className="block max-w-[32px] max-h-[32px]">
             <Profile />
           </div>
-          <p className="block text-[20px] leading-[22px] ">
+          <p className="block md:text-[20px] text-[18px] leading-[135%] ">
             Va 18 yoshdan yuqori bo’lsangiz bas
           </p>
         </div>
       </div>
       {/* CARDS */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[25px] lg:gap-0">
-        <p className="leading-[22px] text-[20px]">
+        <p className="leading-[135%] md:text-[20px] text-[18px]">
           Biz sizdan hech qanday rasmiy ish joy va mahalladan spravka so’rab
           boshingizni og’ritmaymiz
         </p>

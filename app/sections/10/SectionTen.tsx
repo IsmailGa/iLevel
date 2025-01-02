@@ -39,7 +39,7 @@ const SectionTen: React.FC = () => {
 
   return (
     <section className="flex flex-col w-full mt-[75px] gap-[35px]" id="faq">
-      <h1 className="text-[36px] leading-[41px] mb-4">
+      <h1 className="md:text-[36px] text-[28px] leading-[135%] mb-4">
         Eng ko‘p so‘raladigan savollar:
       </h1>
 
@@ -53,10 +53,10 @@ const SectionTen: React.FC = () => {
             {/* QUESTION */}
             <div
               onClick={() => toggleDropdown(index)}
-              className="cursor-pointer flex justify-between items-center mt-[33px]"
+              className="cursor-pointer flex justify-between items-center mt-[33px] gap-[44px] md:gap-0"
             >
               <h2
-                className={`text-[28px] leading-[32px] transition-transform duration-500 ease-in-out ${
+                className={`md:text-[28px] text-[22px] leading-[135%] transition-transform duration-500 ease-in-out ${
                   openIndex === index ? "text-primary" : ""
                 }`}
               >
@@ -88,7 +88,7 @@ const SectionTen: React.FC = () => {
               style={{ position: "relative" }}
             >
               <p
-                className={`mt-[45px] transition-opacity duration-450 leading-[22px] text-[20px]  ${
+                className={`mt-[45px] transition-opacity duration-450 leading-[135%] md:text-[20px] text-[18px]  ${
                   openIndex === index ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -98,6 +98,7 @@ const SectionTen: React.FC = () => {
           </div>
         </div>
       ))}
+      <div className="w-full h-[2px] bg-gradient-to-r from-primary"></div>
     </section>
   );
 };

@@ -38,7 +38,7 @@ const SectionSeven = () => {
         <div className="relative bg-primary/10 border-primary border-[1px] rounded-[25px] px-[30px] pt-[30px] cursor-pointer group overflow-hidden">
           <div className="flex justify-between w-full">
             <h1 className="max-w-[237px] text-[28px] leading-[32px]">
-              iPhonelarni yangi va ishlatilganlarini
+              Macbook
             </h1>
             <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
               <Image src={arrow} alt="arrow_diagonal" />
@@ -50,9 +50,7 @@ const SectionSeven = () => {
         {/*  CARD THREE */}
         <div className="relative bg-primary/10 border-primary border-[1px] rounded-[25px] px-[30px] pt-[30px] cursor-pointer group overflow-hidden">
           <div className="flex justify-between w-full">
-            <h1 className="max-w-[237px] text-[28px] leading-[32px]">
-              iPhonelarni yangi va ishlatilganlarini
-            </h1>
+            <h1 className="max-w-[237px] text-[28px] leading-[32px]">iMac</h1>
             <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
               <Image src={arrow} alt="arrow_diagonal" />
             </span>
@@ -65,9 +63,7 @@ const SectionSeven = () => {
         {/* CARD FOUR */}
         <div className="relative bg-primary/10 border-primary border-[1px] rounded-[25px] px-[30px] pt-[30px] cursor-pointer group overflow-hidden">
           <div className="flex justify-between w-full">
-            <h1 className="max-w-[237px] text-[28px] leading-[32px]">
-              iPhonelarni yangi va ishlatilganlarini
-            </h1>
+            <h1 className="max-w-[237px] text-[28px] leading-[32px]">iWatch</h1>
             <span className="flex items-center justify-center bg-primary rounded-full p-[11px] shrink-0 aspect-square w-auto h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
               <Image src={arrow} alt="arrow_diagonal" />
             </span>

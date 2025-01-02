@@ -6,14 +6,14 @@ import Link from "next/link";
 
 const SectionFour = () => {
   return (
-    <section className="mt-[75px]">
+    <section className="mt-[75px]" id="4">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center relative" id="4">
         {/* IMAGE */}
         <div className="flex flex-col flex-1">
           <Image
             src={calculator}
             alt="calculator"
-            className="w-full h-auto min-[400px]:w-[518px] min-[400px]:z-[-1] min-[400px]:absolute lg:static top-[-50%]"
+            className="w-full h-auto sm:w-[518px] sm:z-[-1] sm:absolute lg:static md:top-[-50%] sm:top-[0%] md:left-0 sm:left-[-20%]"
           />
         </div>
         {/* IMAGE */}

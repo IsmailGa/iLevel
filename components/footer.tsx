@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Container from "./container";
 import arrow from "@/assets/arrow_diagonal.svg";
@@ -17,15 +18,31 @@ const manropeM = Manrope({ subsets: ["latin"], weight: "400" });
 const manropeB = Manrope({ subsets: ["latin"], weight: "500" });
 
 const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0, 
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="mt-[75px] pb-[30px] relative overflow-hidden">
-      <Image src={rec} alt="rect" className="max-w-[292px] w-full absolute bottom-[-25%] z-[-1] left-[5%]" />
+      <Image
+        src={rec}
+        alt="rect"
+        className="max-w-[292px] w-full absolute bottom-[-25%] z-[-1] left-[5%]"
+      />
       <div className="w-full bg-gradient-to-r from-primary to-primary/50 h-[1px]"></div>
       <Container>
         <div className="mt-[65px] flex flex-col gap-[50px] ">
           {/* THE FIRST ROW */}
           <div className="flex justify-between ">
-            <Image src={arrowUp} alt="arrow up" />
+            <Image
+              src={arrowUp}
+              alt="arrow up"
+              className="cursor-pointer"
+              onClick={handleClick}
+            />
 
             {/* LINKS */}
             <ul className="lg:flex grid grid-cols-auto lg:gap-[45px] gap-1  uppercase font-[--pangram]">
@@ -108,7 +125,11 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <Image src={lines} alt="lines" className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] right-0" />
+      <Image
+        src={lines}
+        alt="lines"
+        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] right-0"
+      />
     </footer>
   );
 };

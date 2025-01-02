@@ -41,7 +41,7 @@ const SectionTwo = () => {
         <Image
           src={wallet}
           alt="wallet"
-          className="h-auto max-md:w-full max-md:z-[-1] max-md:absolute lg:static max-md:right-[-30%] md:right-[-40%] max-md:top-0 md:top-[-20%]"
+          className="h-auto md:opacity-100 opacity-50 max-md:w-full max-md:z-[-1] max-md:absolute lg:static max-md:right-[-30%] md:right-[-40%] max-md:top-0 md:top-[-20%]"
         />
       </div>
     </section>

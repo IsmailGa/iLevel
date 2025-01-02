@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
@@ -18,10 +18,12 @@ const SectionEleven = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 bg-primary md:p-[35px] p-[25px] items-center md:gap-[35px] gap-[25px] rounded-[25px]">
         {/* LEFT SIDE DESCRIPTION */}
         <div className="flex flex-col md:gap-[45px] lg:gap-[75px] gap-[25px] relative">
-          <Image src={formDecor} alt={"form decor"} className="absolute" />
           <h1 className="md:text-[36px] text-[28px] leading-[135%]">
             Yordam kerakmi? Bizning mutaxassislar javob berishga tayyor.
           </h1>
+          <div className="w-full absolute top-5 bottom-5">
+            <Image src={formDecor} alt={"form decor"} className="" />
+          </div>
           <p className="md:text-[20px] text-[18px] leading-[135%]">
             Formani to‘ldiring, va bizning mutaxassislar siz bilan bog‘lanishadi
             hamda qiziqtirayotgan savollar bo‘yicha konsultatsiya berishadi.
@@ -60,7 +62,9 @@ const SectionEleven = () => {
               required
             />
             <button className="bg-white h-[50px] w-full rounded-[25px] p-[5px] text-primary flex items-center mt-[10px]">
-              <p className="uppercase w-full text-center text-[16px] leading-[18px]">Ro’yxatdan o’tish</p>
+              <p className="uppercase w-full text-center text-[16px] leading-[18px]">
+                Ro’yxatdan o’tish
+              </p>
               <span className="bg-primary rounded-[25px] w-[43px] h-[43px] flex justify-center items-center ml-auto">
                 <Image src={arrow} alt="arrow_diagonal" />
               </span>

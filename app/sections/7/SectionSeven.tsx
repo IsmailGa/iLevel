@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import iphone from "@/assets/cards/iphones.png";

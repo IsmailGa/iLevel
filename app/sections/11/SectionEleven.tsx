@@ -15,14 +15,14 @@ const SectionEleven = () => {
 
   return (
     <section className="flex flex-col w-full mt-[75px]" id="contacts">
-      <div className="grid lg:grid-cols-2 grid-cols-1 bg-primary p-[35px] items-center gap-[35px] rounded-[25px]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 bg-primary md:p-[35px] p-[25px] items-center md:gap-[35px] gap-[25px] rounded-[25px]">
         {/* LEFT SIDE DESCRIPTION */}
-        <div className="flex flex-col justify-between relative gap-[72px]">
+        <div className="flex flex-col md:gap-[45px] lg:gap-[75px] gap-[25px] relative">
           <Image src={formDecor} alt={"form decor"} className="absolute" />
-          <h1 className="text-[36px] leading-[43px]">
+          <h1 className="md:text-[36px] text-[28px] leading-[135%]">
             Yordam kerakmi? Bizning mutaxassislar javob berishga tayyor.
           </h1>
-          <p className="text-[20px] leading-[27px]">
+          <p className="md:text-[20px] text-[18px] leading-[135%]">
             Formani to‘ldiring, va bizning mutaxassislar siz bilan bog‘lanishadi
             hamda qiziqtirayotgan savollar bo‘yicha konsultatsiya berishadi.
           </p>

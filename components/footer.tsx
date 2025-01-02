@@ -20,32 +20,43 @@ const manropeB = Manrope({ subsets: ["latin"], weight: "500" });
 const Footer = () => {
   const handleClick = () => {
     window.scrollTo({
-      top: 0, 
+      top: 0,
       behavior: "smooth",
     });
   };
 
   return (
-    <footer className="mt-[75px] pb-[30px] relative overflow-hidden">
-      <Image
-        src={rec}
-        alt="rect"
-        className="max-w-[292px] w-full absolute bottom-[-25%] z-[-1] left-[5%]"
-      />
+    <footer className="mt-[75px] relative pb-[30px] overflow-hidden">
       <div className="w-full bg-gradient-to-r from-primary to-primary/50 h-[1px]"></div>
       <Container>
         <div className="mt-[65px] flex flex-col gap-[50px] ">
           {/* THE FIRST ROW */}
-          <div className="flex justify-between ">
-            <Image
-              src={arrowUp}
-              alt="arrow up"
-              className="cursor-pointer"
-              onClick={handleClick}
-            />
+          <div className="flex w-full justify-between relative">
+            <div className="justify-self-start self-start">
+              <div className="w-[65px] md:w-full">
+                <Image
+                  src={arrowUp}
+                  alt="arrow up"
+                  className="cursor-pointer "
+                  onClick={handleClick}
+                />
+              </div>
+              <div
+                className="
+                md:w-[292px]
+                w-[175px] 
+                h-full 
+                absolute 
+                z-[-1] 
+                left-[0%]
+                "
+              >
+                <Image src={rec} alt="rect" className="" />
+              </div>
+            </div>
 
             {/* LINKS */}
-            <ul className="lg:flex grid grid-cols-auto lg:gap-[45px] gap-1  uppercase font-[--pangram]">
+            <ul className="flex gap-[45px] max-sm:max-md:gap-[25px] max-sm:max-md:flex-col max-sm:max-md:items-center uppercase font-[--pangram]">
               <li>
                 <Link href="#aboutus">Biz haqimizda</Link>
               </li>
@@ -59,16 +70,7 @@ const Footer = () => {
                 <Link href="#contacts">Kontaktalar</Link>
               </li>
             </ul>
-            {/* CONTACT US LINK*/}
-            <Link
-              href="#contacts"
-              className="max-w-[165px] w-full h-[50px] flex p-[1px] justify-between items-center border-white border-[1px] rounded-[25px]"
-            >
-              <p className="m-auto">Bog&apos;lanish</p>
-              <span className="bg-white rounded-[25px] m-[1px] w-[43px] h-[43px] flex justify-center items-center">
-                <Image src={arrow} alt="arrow_diagonal" />
-              </span>
-            </Link>
+            <div className=""></div>
           </div>
           {/* THE SECOND ROW */}
           <div className="w-full flex justify-between">
@@ -113,7 +115,19 @@ const Footer = () => {
               </h1>
             </div>
             {/* RIGHT SIDE */}
-            <div className="self-end justify-seld-end ">
+            <div className="flex flex-col items-end gap-[35px]">
+              {/* CONTACT US LINK*/}
+              <Link
+                href="/"
+                className="self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+              >
+                <p className="text-white text-center px-[20px] text-[16px]">
+                  Bog&apos;lanish
+                </p>
+                <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
+                  <Image src={arrow} alt="arrow_diagonal" />
+                </span>
+              </Link>
               <h1
                 className={
                   "uppercase text-[16px] font-[500]  " + manropeB.className
@@ -128,7 +142,7 @@ const Footer = () => {
       <Image
         src={lines}
         alt="lines"
-        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] right-0"
+        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2"
       />
     </footer>
   );

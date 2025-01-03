@@ -80,7 +80,7 @@ const Footer = () => {
                 {/* TELEGRAM */}
                 <li className="border-[1px] border-white p-[11px] backdrop-blur-sm bg-white/10 rounded-full">
                   <Link
-                    href="telegram.org"
+                    href="https://t.me/ilevel_uz"
                     className="flex justify-center items-center"
                   >
                     <TelegramIcon />
@@ -89,7 +89,7 @@ const Footer = () => {
                 {/* INSTAGRAM */}
                 <li className="border-[1px] border-white p-[11px] backdrop-blur-sm bg-white/10 rounded-full">
                   <Link
-                    href="instagram.com"
+                    href="https://www.instagram.com/ilevel_uz/"
                     className="flex justify-center items-center"
                   >
                     <InstagramIcon />
@@ -118,14 +118,18 @@ const Footer = () => {
             <div className="flex flex-col items-end gap-[35px]">
               {/* CONTACT US LINK*/}
               <Link
-                href="/"
-                className="self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+                href="#contacts"
+                className="lg:flex hidden h-[50px] p-[3px] items-center border-white hover:border-primary hover:bg-[rgba(255,255,255,0.1)] border-[1px] rounded-[25px] mt-5 md:mt-0 transition-all duration-30 group"
               >
-                <p className="text-white text-center px-[20px] text-[16px]">
+                <p className="flex justify-center items-center px-[20px]">
                   Bog&apos;lanish
                 </p>
-                <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
-                  <Image src={arrow} alt="arrow_diagonal" />
+                <span className="bg-white rounded-[25px] w-[43px] h-[43px] shrink-0 flex justify-center items-center">
+                  <Image
+                    src={arrow}
+                    alt="arrow_diagonal"
+                    className="group-hover:rotate-[45deg] transition-all duration-300"
+                  />
                 </span>
               </Link>
               <h1

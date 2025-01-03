@@ -28,7 +28,7 @@ export default function Home() {
         <SectionSeven setOpen={setOpen} />
         {/*== CATALOG ==*/}
         <SectionEight setOpen={setOpen} />
-        <SectionNine />
+        <SectionNine  setOpen={setOpen}/>
         <SectionTen />
         {/*== FORM ==*/}
         <SectionEleven />

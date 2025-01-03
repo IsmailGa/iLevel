@@ -7,7 +7,6 @@ import {
 } from "@/public/assets/icons.js";
 import arrow from "@/assets/arrow_diagonal.svg";
 import Image from "next/image";
-import Link from "next/link";
 
 type SetOpenType = {
   setOpen: (value: boolean) => void;

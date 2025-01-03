@@ -1,7 +1,6 @@
 import React from "react";
 import thirtyBg from "@/assets/thirty.svg";
 import arrow from "@/assets/arrow_diagonal_white.svg";
-import Link from "next/link";
 import Image from "next/image";
 
 type SetOpenType = {

@@ -11,44 +11,44 @@ import Link from "next/link";
 
 const SectionFive = () => {
   return (
-    <section className="mt-[75px] w-full flex flex-col gap-[35px]" id="5">
-      <h1 className="md:text-[36px] text-[28px] leading-[41px] max-w-[613px]">
+    <section className="sm:mt-[75px] mt-[65px] w-full flex flex-col sm:gap-[35px] gap-[25px]" id="5">
+      <h1 className="md:text-[36px] text-[28px] leading-[110%] max-w-[613px]">
         <span className="text-primary">iPhonelarni</span> hech qanday bosh
         og’riqlarsiz sotib olish uchun nima qilish kerak?
       </h1>
       {/* CARDS */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-[25px] items-center">
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 xl:gap-[25px] md:gap-x-[25px] max-md:gap-[25px] max-sm:gap-[18px] items-center">
         {/* CARD ONE */}
-        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mb-[70px] md:mt-[-38px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mt-0 lg:mb-[32px] md:mt-[-38px]">
           <div className="block max-w-[32px] max-h-[32px]">
             <IconWallet />
           </div>
-          <p className="block md:text-[20px] text-[18px] leading-[135%]">
+          <p className="block md:text-[20px] text-[18px] leading-[110%]">
             Boshlang’ich 30% to’lov
           </p>
         </div>
         {/* CARD TWO*/}
-        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mt-[70px] md:mt-[38px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mt-[32px] md:mt-[38px]">
           <div className="block max-w-[32px] max-h-[32px]">
             <Paper />
           </div>
-          <p className="block md:text-[20px] text-[18px] leading-[135%]">Birgina pasport</p>
+          <p className="block md:text-[20px] text-[18px] leading-[110%]">Birgina pasport</p>
         </div>
         {/* CARD THREE*/}
-        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between  lg:mb-[70px] md:mt-[-38px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mt-0 lg:mb-[32px] md:mt-[-38px]">
           <div className="block max-w-[32px] max-h-[32px]">
             <SquareTick />
           </div>
-          <p className="block md:text-[20px] text-[18px] leading-[135%]">
+          <p className="block md:text-[20px] text-[18px] leading-[110%]">
             Hech qanday mibdan qarzdorlik yo’qligi
           </p>
         </div>
         {/* CARD FOUR*/}
-        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mt-[70px] md:mt-[38px]">
+        <div className="border-primary h-[165px] bg-primary/10 border-[1px] rounded-[25px]  p-[25px] flex flex-col justify-between lg:mt-[32px] md:mt-[38px]">
           <div className="block max-w-[32px] max-h-[32px]">
             <Profile />
           </div>
-          <p className="block md:text-[20px] text-[18px] leading-[135%] ">
+          <p className="block md:text-[20px] text-[18px] leading-[110%] ">
             Va 18 yoshdan yuqori bo’lsangiz bas
           </p>
         </div>

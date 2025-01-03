@@ -5,13 +5,13 @@ import arrow from "@/assets/arrow_diagonal.svg";
 
 const SectionThree = () => {
   return (
-    <section className="mt-[75px] flex-col flex gap-[35px]" id="3">
+    <section className="mt-[75px] flex-col flex sm:gap-[35px] gap-[25px]" id="3">
       {/* TITLE */}
-      <h1 className="md:text-[36px] text-[28px] leading-[135%]">
+      <h1 className="md:text-[36px] text-[28px] leading-[110%]">
         <span className="text-primary ">Bu</span> muammolar sabab…
       </h1>
       {/* CARDS */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-[25px]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 sm:gap-[25px] gap-[18px]">
         {/* FIRST CARD */}
         <div className="border-primary border-[1px] rounded-[25px] bg-primary/10 p-[25px] grid gap-[25px]">
           <h2 className="text-primary md:text-[28px] text-[24px]">(1)</h2>

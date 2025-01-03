@@ -3,7 +3,11 @@ import thousand from "@/assets/thousand-plus.svg";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import Image from "next/image";
 
-const SectionEight = () => {
+type SetOpenType = {
+  setOpen: (value: boolean) => void;
+};
+
+const SectionEight = ({ setOpen }: SetOpenType) => {
   return (
     <section className="w-full sm:mt-[75px] mt-[65px] flex flex-col" id="6">
       <div className="bg-primary rounded-[25px] md:p-[35px] p-[25px]">
@@ -18,6 +22,7 @@ const SectionEight = () => {
             </p>
 
             <button
+              onClick={() => setOpen(true)}
               className="justify-self-end z-[50] max-lg:justify-self-start flex flex-shrink-0 items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
             >
               <p className="text-primary text-center px-[20px] text-[16px] uppercase">

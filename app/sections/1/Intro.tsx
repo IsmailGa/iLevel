@@ -11,7 +11,7 @@ import Link from "next/link";
 const Intro = () => {
   return (
     <section
-      className="w-full flex flex-col items-center xl:pt-[175px] md:pt-[160px] pt-[19vw] relative justify-center"
+      className="w-full flex flex-col items-center xl:pt-[175px] md:pt-[160px] xs:pt-[130px] pt-[18vw] relative justify-center"
       id="aboutus"
     >
       <div className="absolute top-0 w-full z-[-1]">
@@ -24,7 +24,7 @@ const Intro = () => {
       </div>
       {/* Основной блок */}
 
-      <div className="relative bg-primary w-full xl:h-[465px] lg:h-[400px] h-[380px] rounded-[35px] p-[24px] md:p-[35px] flex flex-col items-center">
+      <div className="relative bg-primary w-full 2xl:h-[445px] xl:h-[400px] lg:h-[360px] md:h-[300px] h-[380px] rounded-[35px] p-[24px] md:p-[35px] flex flex-col items-center">
         {/* Фоновые линии */}
 
         {/* iPhone */}

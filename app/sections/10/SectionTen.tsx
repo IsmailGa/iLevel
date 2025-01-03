@@ -38,7 +38,7 @@ const SectionTen: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col w-full mt-[75px] gap-[35px]" id="faq">
+    <section className="flex flex-col w-full sm:mt-[75px] mt-[65px] gap-[35px]" id="faq">
       <h1 className="md:text-[36px] text-[28px] leading-[135%] mb-4">
         Eng ko‘p so‘raladigan savollar:
       </h1>

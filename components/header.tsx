@@ -12,17 +12,18 @@ const Navbar = () => {
 
   useEffect(() => {
     if (open) {
-      document.body.style.position = "fixed";
+      document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.style.position = "static";
+      document.documentElement.style.removeProperty("overflow");
     }
+  
     return () => {
-      document.body.style.position = "static";
+      document.documentElement.style.removeProperty("overflow");
     };
   }, [open]);
 
   return (
-    <div className="py-[14px] sm:py-[25px] md:py-[35px] w-full flex justify-between items-center">
+    <div className="py-[14px] sm:py-[18px] md:py-[24px] w-full flex justify-between items-center">
       <Container>
         <div className="flex justify-between items-center">
           {/* LOGO */}
@@ -62,14 +63,12 @@ const Navbar = () => {
 
           {/* MOBILE NAV */}
           <div
-            className={`fixed flex top-0 left-0 h-full w-full bg-[#070529] z-[50] flex flex-col items-center justify-center gap-[25px] transition-all duration-140 ${
+            onClick={() => setOpen((prev) => !prev)}
+            className={`fixed flex top-0 left-0 h-full w-full bg-[#070529] z-[50] flex-col items-center justify-center gap-[25px] transition-all duration-140 ${
               open ? "visibile opacity-1" : "invisible opacity-0"
             } lg:hidden`}
           >
-            <div
-              className={`z-[1] w-full mx-auto sm:px-[30px] px-[20px]`}
-              onClick={() => setOpen((prev) => !prev)}
-            >
+            <Container>
               <ul className="text-white font-[--pangram] flex flex-col w-full gap-[24px] items-center">
                 <li className="flex w-full">
                   <Link
@@ -117,15 +116,19 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
+            </Container>
+
+            <div className="absolute w-full md:bottom-[-230px] sm:bottom-[-180px] xs:bottom-[-130px] bottom-[-22vw] opacity-[50%]">
+              <Container>
+                <Image className="w-full" src={decor_lines} alt="decor_lines" />
+              </Container>
             </div>
-            <div className="absolute w-[85%] bottom-[-23vw] opacity-[50%]">
-              <Image src={decor_lines} alt="decor_lines" />
-            </div>
+            
           </div>
 
           {/* NAV LINKS */}
           <div className={`lg:flex hidden`}>
-            <ul className="uppercase text-white font-[--pangram] flex flex-row gap-[1px]">
+            <ul className="uppercase text-white font-[--pangram] flex flex-row gap-[5px]">
               <li>
                 <Link
                   className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"

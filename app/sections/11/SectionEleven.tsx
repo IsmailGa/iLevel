@@ -61,7 +61,7 @@ const SectionEleven = () => {
   };
 
   return (
-    <section className="flex flex-col w-full mt-[75px]" id="contacts">
+    <section className="flex flex-col w-full sm:mt-[75px] mt-[65px]" id="contacts">
       <div className="grid bg-primary lg:grid-cols-2 grid-cols-1 items-center md:gap-[35px] gap-[25px] md:p-[35px] p-[25px] rounded-[25px] w-full">
         {/* LEFT SIDE DESCRIPTION */}
         <div className="flex flex-col md:gap-[45px] lg:gap-[75px] gap-[25px] relative">

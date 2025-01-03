@@ -146,7 +146,7 @@ const Footer = () => {
       <Image
         src={lines}
         alt="lines"
-        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2"
+        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2 opacity-[50%]"
       />
     </footer>
   );

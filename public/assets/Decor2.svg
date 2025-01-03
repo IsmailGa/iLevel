@@ -1,15 +1,20 @@
-<svg width="915" height="346" viewBox="0 0 915 346" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23 23.0001L23 23" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M23 83.0001L23 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M131.625 78L131.625 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M240.25 49L240.25 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M348.875 23.0001L348.875 23" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M348.875 83.0001L348.875 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M457.5 23L457.5 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M566.125 23.0001L566.125 23" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M566.125 83.0001L566.125 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M674.75 67L674.75 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M783.375 93L783.375 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M892 23.0001L892 23" stroke="white" stroke-width="45" stroke-linecap="round"/>
-<path d="M892 83.0001L892 323" stroke="white" stroke-width="45" stroke-linecap="round"/>
+<svg width="944" height="278" viewBox="0 0 944 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="81.9541" y="47.5337" width="49.6377" height="65.6189" rx="24.8189" fill="white"/>
+<rect x="81.9541" y="125.625" width="48.8991" height="81.2866" rx="24.4495" fill="white"/>
+<rect x="163.108" y="55.7993" width="49.4841" height="135.513" rx="24.7421" fill="white"/>
+<rect x="244.262" y="65.7634" width="49.4841" height="181.348" rx="24.7421" fill="white"/>
+<rect x="244.262" width="49.4841" height="49.8208" rx="24.7421" fill="white"/>
+<rect x="325.339" y="41.1318" width="49.6377" height="236.868" rx="24.8189" fill="white"/>
+<rect x="407.001" y="12.3235" width="49.6377" height="235.268" rx="24.8189" fill="white"/>
+<rect x="487.724" y="44.4859" width="49.4841" height="69.7491" rx="24.7421" fill="white"/>
+<rect x="487.062" y="128.659" width="49.6377" height="72.0207" rx="24.8189" fill="white"/>
+<rect x="569.463" y="41.3822" width="48.8991" height="193.61" rx="24.4495" fill="white"/>
+<rect x="650.962" y="20.6911" width="48.8991" height="93.1101" rx="24.4495" fill="white"/>
+<rect x="650.547" y="125.625" width="48.8991" height="81.2866" rx="24.4495" fill="white"/>
+<rect x="731.701" y="55.7993" width="49.4841" height="135.513" rx="24.7421" fill="white"/>
+<rect x="812.855" y="65.7634" width="49.4841" height="181.348" rx="24.7421" fill="white"/>
+<rect x="812.855" width="49.4841" height="49.8208" rx="24.7421" fill="white"/>
+<rect x="893.925" y="40.7733" width="50.0747" height="129.733" rx="25.0373" fill="white"/>
+<rect y="92.6667" width="50.0747" height="90.8133" rx="25.0373" fill="white"/>
+<rect y="26.8733" width="50.0747" height="50.04" rx="25.02" fill="white"/>
 </svg>

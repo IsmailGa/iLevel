@@ -1,20 +1,17 @@
 import React from "react";
 import wallet from "@/assets/wallet_2.png";
-import Image from "next/image";
 
 const SectionTwo = () => {
   return (
-    <section className="mt-[95px] w-full flex-col flex" id="2">
-      <div className="lg:grid lg:grid-cols-2 flex w-full h-full items-center relative">
+    <section className="sm:mt-[95px] mt-[65px] w-full flex-col flex" id="2">
+      <div className="relative lg:flex-row xl:pr-[500px] lg:pr-[300px] sm:pr-[100px] flex flex-col w-full h-full items-center">
         {/* LEFT SIDE */}
-        <div className="w-full relative">
-          <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[135%] max-w-[614px]">
+        <div className="flex-col flex sm:gap-[35px] gap-[25px] max-w-[720px]">
+          <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
             <span className="text-primary">iPhone</span> sotib
             ololmayotganingizning asosiy sababi
           </h1>
-          <br />
-          <br />
-          <div className="w-full max-w-[500px]">
+          <div className="w-full ">
             <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%]">
               Do‘stim... <br />
               Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
@@ -38,11 +35,11 @@ const SectionTwo = () => {
           </div>
         </div>
         {/* RIGHT SIDE */}
-        <Image
-          src={wallet}
-          alt="wallet"
-          className="h-auto md:opacity-100 opacity-50 max-md:w-full max-md:z-[-1] max-md:absolute lg:static max-md:right-[-30%] md:right-[-40%] max-md:top-0 md:top-[-20%]"
-        />
+        <div
+          style={{ backgroundImage: `url(${wallet.src})` }}
+          className="absolute z-[-1] 2xl:right-0 xl:h-[510px] md:h-[430px] sm:h-[320px] h-[300px] bg-contain bg-center xl:right-[-30px] sm:right-[-130px] right-[-90px] sm:opacity-[1] opacity-[0.75] lg:top-0 bg-no-repeat w-[auto] aspect-square "
+        >
+        </div>
       </div>
     </section>
   );

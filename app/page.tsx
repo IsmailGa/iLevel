@@ -18,17 +18,17 @@ export default function Home() {
   return (
     <>
       <div className="md:pt-[60px] pt-[45px] w-full">
-        <Intro />
+        <Intro setOpen={setOpen} />
         <SectionTwo />
-        <SectionThree />
-        <SectionFour />
-        <SectionFive />
-        <SectionSix />
+        <SectionThree setOpen={setOpen} />
+        <SectionFour setOpen={setOpen} />
+        <SectionFive setOpen={setOpen} />
+        <SectionSix setOpen={setOpen} />
         {/*== CATALOG ==*/}
-        <SectionSeven />
+        <SectionSeven setOpen={setOpen} />
         {/*== CATALOG ==*/}
         <SectionEight setOpen={setOpen} />
-        <SectionNine />
+        <SectionNine  setOpen={setOpen}/>
         <SectionTen />
         {/*== FORM ==*/}
         <SectionEleven />

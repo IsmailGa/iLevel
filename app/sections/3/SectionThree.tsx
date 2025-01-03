@@ -1,11 +1,17 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import arrow from "@/assets/arrow_diagonal.svg";
 
-const SectionThree = () => {
+type SetOpenType = {
+  setOpen: (value: boolean) => void;
+};
+
+const SectionThree = ({ setOpen }: SetOpenType) => {
   return (
-    <section className="mt-[75px] flex-col flex sm:gap-[35px] gap-[25px]" id="3">
+    <section
+      className="mt-[75px] flex-col flex sm:gap-[35px] gap-[25px]"
+      id="3"
+    >
       {/* TITLE */}
       <h1 className="md:text-[36px] text-[28px] leading-[110%]">
         <span className="text-primary ">Bu</span> muammolar sabab…
@@ -31,8 +37,8 @@ const SectionThree = () => {
       </div>
       {/* CARDS */}
       {/* LINK */}
-      <Link
-        href="/"
+      <button
+        onClick={() => setOpen(true)}
         className="self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
       >
         <p className="text-white text-center px-[20px] text-[16px]">
@@ -41,7 +47,7 @@ const SectionThree = () => {
         <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
           <Image src={arrow} alt="arrow_diagonal" />
         </span>
-      </Link>
+      </button>
     </section>
   );
 };

@@ -1,34 +1,58 @@
 "use client";
-import React, { FormEvent, useEffect } from "react";
+import React, { FormEvent, useState, useEffect } from "react";
 import Image from "next/image";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import Container from "./container";
 
-const Modal = ({
-  setOpen,
-  open,
-}: {
+interface ModalProps {
   setOpen: (value: boolean) => void;
   open: boolean;
-}) => {
-  useEffect(() => {
-    if (open) {
-      document.body.style.position = "fixed";
-    } else {
-      document.body.style.position = "static";
+}
+
+const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+
+    if (!form.checkValidity()) {
+      alert("Пожалуйста, проверьте, что все поля заполнены корректно!");
+      return;
     }
 
-    return () => {
-      document.body.style.position = "static";
+    setLoading(true);
+    const formData = {
+      name: form.name.value,
+      number: form.number.value,
+      location: form.location.value,
     };
-  }, [open]);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
-    const form = event.target as HTMLFormElement;
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      alert("Пожалуйста, проверьте, что все поля заполнены корректно!");
+    try {
+      const response = await fetch("/api/google-sheets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 2000);
+        form.reset();
+      } else {
+        alert("Произошла ошибка при отправке данных.");
+      }
+    } catch (error) {
+      console.error("Ошибка отправки формы:", error);
+      alert("Не удалось отправить форму.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -37,6 +61,18 @@ const Modal = ({
     document.body.style.position = "static";
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "static";
+    }
+    return () => {
+      document.body.style.position = "static";
+    };
+  }, [open]);
+
+  // Если модальное окно закрыто, ничего не рендерим
   if (!open) return null;
 
   return (
@@ -98,15 +134,24 @@ const Modal = ({
                   placeholder="Shahringiz yoki yashash joyingiz"
                   required
                 />
-                <button className="bg-white h-[50px] w-full rounded-[25px] p-[5px] text-primary flex items-center mt-[10px]">
-                  <p className="uppercase w-full text-center text-[16px] leading-[18px]">
-                    Ro’yxatdan o’tish
-                  </p>
-                  <span className="bg-primary rounded-[25px] w-[43px] h-[43px] flex justify-center items-center ml-auto">
-                    <Image src={arrow} alt="arrow_diagonal" />
-                  </span>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-white h-[50px] w-full rounded-[25px] p-[5px] text-primary flex items-center mt-[10px] opacity-90 hover:opacity-100"
+                >
+                  <>
+                    <p className="uppercase w-full text-center text-[16px] leading-[18px]">
+                      {loading ? "Yuklanmoqda..." : "Ro’yxatdan o’tish"}
+                    </p>
+                    <span className="bg-primary rounded-[25px] w-[43px] h-[43px] flex justify-center items-center ml-auto">
+                      <Image src={arrow} alt="arrow_diagonal" />
+                    </span>
+                  </>
                 </button>
               </form>
+              {success && (
+                <p className="text-green-700 text-[18px] mt-2">Ma'lumotlar yuborildi!</p>
+              )}
             </div>
           </div>
         </div>

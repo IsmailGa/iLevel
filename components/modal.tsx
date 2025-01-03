@@ -10,13 +10,23 @@ interface ModalProps {
   open: boolean;
 }
 
+interface FormElements extends HTMLFormControlsCollection {
+  name: HTMLInputElement;
+  number: HTMLInputElement;
+  location: HTMLInputElement;
+}
+
+interface CustomForm extends HTMLFormElement {
+  elements: FormElements;
+}
+
 const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.target as HTMLFormElement;
+    const form = event.target as CustomForm;
 
     if (!form.checkValidity()) {
       alert("Пожалуйста, проверьте, что все поля заполнены корректно!");
@@ -25,9 +35,9 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
 
     setLoading(true);
     const formData = {
-      name: form.name.value,
-      number: form.number.value,
-      location: form.location.value,
+      name: form.elements.name.value,
+      number: form.elements.number.value,
+      location: form.elements.location.value,
     };
 
     try {
@@ -150,7 +160,9 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
                 </button>
               </form>
               {success && (
-                <p className="text-green-700 text-[18px] mt-2">Ma&apos;lumotlar yuborildi!</p>
+                <p className="text-green-700 text-[18px] mt-2">
+                  Ma&apos;lumotlar yuborildi!
+                </p>
               )}
             </div>
           </div>

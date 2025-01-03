@@ -4,13 +4,23 @@ import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import React, { FormEvent, useState } from "react";
 
+interface FormElements extends HTMLFormControlsCollection {
+  name: HTMLInputElement;
+  number: HTMLInputElement;
+  location: HTMLInputElement;
+}
+
+interface CustomForm extends HTMLFormElement {
+  elements: FormElements;
+}
+
 const SectionEleven = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.target as HTMLFormElement;
+    const form = event.target as CustomForm;
 
     if (!form.checkValidity()) {
       alert("Пожалуйста, проверьте, что все поля заполнены корректно!");
@@ -19,9 +29,9 @@ const SectionEleven = () => {
 
     setLoading(true);
     const formData = {
-      name: form.name.value,
-      number: form.number.value,
-      location: form.location.value,
+      name: form.elements.name.value,
+      number: form.elements.number.value,
+      location: form.elements.location.value,
     };
 
     try {

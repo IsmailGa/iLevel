@@ -128,7 +128,7 @@ const Navbar = () => {
 
           {/* NAV LINKS */}
           <div className={`lg:flex hidden`}>
-            <ul className="uppercase text-white font-[--pangram] flex flex-row gap-[1px]">
+            <ul className="uppercase text-white font-[--pangram] flex flex-row gap-[5px]">
               <li>
                 <Link
                   className="flex h-[50px] px-[18px] items-center border-transparent hover:border-primary border-[1px] rounded-[25px] transition-all duration-300"

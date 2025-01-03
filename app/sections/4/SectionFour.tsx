@@ -4,7 +4,11 @@ import calculator from "@/assets/calculator.png";
 import arrow from "@/assets/arrow_diagonal.svg";
 import Link from "next/link";
 
-const SectionFour = () => {
+type SetOpenType = {
+  setOpen: (value: boolean) => void;
+};
+
+const SectionFour = ({ setOpen }: SetOpenType) => {
   return (
     <section className="sm:mt-[95px] mt-[65px] w-full flex-col flex" id="2">
       <div className="relative lg:flex-row xl:pl-[500px] lg:pl-[300px] sm:pl-[100px] flex flex-col w-full h-full items-center justify-end">
@@ -12,25 +16,24 @@ const SectionFour = () => {
         <div
           style={{ backgroundImage: `url(${calculator.src})` }}
           className="absolute z-[-1] 2xl:left-0 xl:h-[450px] md:h-[430px] sm:h-[320px] h-[300px] bg-contain bg-center xl:left-[-30px] sm:left-[-130px] left-[-40px] sm:opacity-[1] opacity-[0.75] lg:top-[50%] top-[-20px] lg:translate-y-[-50%] bg-no-repeat w-[auto] aspect-square "
-        >
-        </div>
+        ></div>
         {/* RIGHT SIDE */}
         <div className="flex-col text-right items-end flex sm:gap-[35px] gap-[25px] max-w-[720px]">
           <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
-            <span className="text-primary">Xo‘sh</span>, iphonelarni qanday qilib 
-            bo’lib to’lashga olsa bo’ladi?
+            <span className="text-primary">Xo‘sh</span>, iphonelarni qanday
+            qilib bo’lib to’lashga olsa bo’ladi?
           </h1>
           <div className="w-full ">
             <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%]">
-              Sizni bo’lib to’lashga iphone xarid qilishdan to‘sib turgan narsa bu..
-              Bo’lib to’lashga telefon xarid qilmoqchi bo’lganingizda sizdan Toshkent
-              propiska, kartadagi aylanma va rasmiy ish joy so’rashlari
-              Shuning uchun siz haligacha eski telefoningizni ishlatib yurishga majbur
-              bo’lyapsiz
+              Sizni bo’lib to’lashga iphone xarid qilishdan to‘sib turgan narsa
+              bu.. Bo’lib to’lashga telefon xarid qilmoqchi bo’lganingizda
+              sizdan Toshkent propiska, kartadagi aylanma va rasmiy ish joy
+              so’rashlari Shuning uchun siz haligacha eski telefoningizni
+              ishlatib yurishga majbur bo’lyapsiz
             </p>
           </div>
-          <Link
-            href="/"
+          <button
+            onClick={() => setOpen(true)}
             className="self-end flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
           >
             <p className="text-white text-center px-[20px] text-[16px]">
@@ -39,7 +42,7 @@ const SectionFour = () => {
             <span className="flex items-center justify-center bg-white rounded-[25px] p-[11px] shrink-0 aspect-square w-[auto] h-[100%] transition-transform duration-300 group-hover:rotate-[45deg]">
               <Image src={arrow} alt="arrow_diagonal" />
             </span>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

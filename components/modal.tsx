@@ -150,7 +150,7 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
                 </button>
               </form>
               {success && (
-                <p className="text-green-700 text-[18px] mt-2">Ma'lumotlar yuborildi!</p>
+                <p className="text-green-700 text-[18px] mt-2">Ma&apos;lumotlar yuborildi!</p>
               )}
             </div>
           </div>

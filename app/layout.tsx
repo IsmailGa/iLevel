@@ -5,7 +5,6 @@ import localFont from "next/font/local";
 import Container from "@/components/container";
 import "./globals.css";
 
-
 const pangram = localFont({
   src: "./fonts/PPPangramSansRounded-Medium.otf",
 });
@@ -20,14 +19,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body className={`${pangram.className}  font-normal antialiased`}>
-        <Navbar />
-        <main className="flex flex-col">
-          <Container>{children}</Container>
-        </main>
-        <Footer />
+        <div className={``}>
+          <Navbar />
+          <main className="flex flex-col">
+            <Container>{children}</Container>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

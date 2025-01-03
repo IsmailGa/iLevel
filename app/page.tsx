@@ -1,6 +1,6 @@
-"use client"
-import Modal from "@/components/modal";
+"use client";
 import { useState } from "react";
+import Modal from "@/components/modal";
 import Intro from "./sections/1/Intro";
 import SectionTen from "./sections/10/SectionTen";
 import SectionEleven from "./sections/11/SectionEleven";
@@ -27,14 +27,14 @@ export default function Home() {
         {/*== CATALOG ==*/}
         <SectionSeven />
         {/*== CATALOG ==*/}
-        <SectionEight setOpen={setOpen}/>
+        <SectionEight setOpen={setOpen} />
         <SectionNine />
         <SectionTen />
         {/*== FORM ==*/}
         <SectionEleven />
         {/*== FORM ==*/}
+        <Modal open={open} setOpen={setOpen} />
       </div>
-      <Modal open={open} setOpen={setOpen}/>
     </>
   );
 }

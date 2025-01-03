@@ -22,6 +22,7 @@ const SectionEight = ({ setOpen }: SetOpenType) => {
             </p>
 
             <button
+              onClick={() => setOpen(true)}
               className="justify-self-end z-[50] max-lg:justify-self-start flex flex-shrink-0 items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
             >
               <p className="text-primary text-center px-[20px] text-[16px] uppercase">

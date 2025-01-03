@@ -86,7 +86,7 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#070529] w-full flex justify-center items-center z-[100]">
+    <div className="fixed inset-0 bg-[#070529]/80 w-full flex justify-center items-center z-[100]">
       <Container>
         <div className="flex flex-col gap-[10px]">
           <button

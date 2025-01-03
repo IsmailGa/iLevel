@@ -3,11 +3,7 @@ import thousand from "@/assets/thousand-plus.svg";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import Image from "next/image";
 
-type SetOpenType = {
-  setOpen?: (value: boolean) => void;
-};
-
-const SectionEight = ({ setOpen }: SetOpenType) => {
+const SectionEight = () => {
   return (
     <section className="w-full sm:mt-[75px] mt-[65px] flex flex-col" id="6">
       <div className="bg-primary rounded-[25px] md:p-[35px] p-[25px]">

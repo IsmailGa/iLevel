@@ -18,7 +18,7 @@ const SectionFive = ({ setOpen }: SetOpenType) => {
       className="sm:mt-[75px] mt-[65px] w-full flex flex-col sm:gap-[35px] gap-[25px]"
       id="5"
     >
-      <h1 className="md:text-[36px] text-[28px] leading-[110%] max-w-[613px]">
+      <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[110%] max-w-[613px]">
         <span className="text-primary">iPhonelarni</span> hech qanday bosh
         og’riqlarsiz sotib olish uchun nima qilish kerak?
       </h1>
@@ -69,7 +69,7 @@ const SectionFive = ({ setOpen }: SetOpenType) => {
         </p>
         <button
           onClick={() => setOpen(true)}
-          className="justify-self-end max-md:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+          className="justify-self-end max-md:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] hover:bg-[rgba(255,255,255,0.1)] hover:border-primary transition-all duration-300 group"
         >
           <p className="text-white text-center px-[20px] text-[16px]">
             Harid qilish

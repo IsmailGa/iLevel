@@ -166,7 +166,7 @@ const Navbar = () => {
           {/* CONTACT US LINK */}
           <Link
             href="#contacts"
-            className="lg:flex hidden h-[50px] p-[3px] items-center border-white hover:border-primary hover:bg-[rgba(255,255,255,0.1)] border-[1px] rounded-[25px] mt-5 md:mt-0 transition-all duration-30 group"
+            className="lg:flex hidden h-[50px] p-[3px] items-center border-white hover:border-primary hover:bg-[rgba(255,255,255,0.1)] border-[1px] rounded-[25px] mt-5 md:mt-0 transition-all duration-300 group"
           >
             <p className="flex justify-center items-center px-[20px]">
               Bog&apos;lanish

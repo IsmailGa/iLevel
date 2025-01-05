@@ -13,7 +13,7 @@ const SectionThree = ({ setOpen }: SetOpenType) => {
       id="3"
     >
       {/* TITLE */}
-      <h1 className="md:text-[36px] text-[28px] leading-[110%]">
+      <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[110%]">
         <span className="text-primary ">Bu</span> muammolar sabab…
       </h1>
       {/* CARDS */}
@@ -39,7 +39,7 @@ const SectionThree = ({ setOpen }: SetOpenType) => {
       {/* LINK */}
       <button
         onClick={() => setOpen(true)}
-        className="self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+        className="self-start flex items-center justify-between border-white border-[1px] hover:bg-[rgba(255,255,255,0.1)] hover:border-primary rounded-[25px] p-[3px] sm:h-[50px] h-[44px] transition-all duration-300 group"
       >
         <p className="text-white text-center px-[20px] text-[16px]">
           Harid qilish

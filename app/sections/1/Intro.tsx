@@ -57,9 +57,9 @@ const Intro = ({ setOpen }: SetOpenType) => {
           </div>
 
           {/* Текст и кнопка */}
-          <div className="relative z-[4] flex w-full h-full md:h-fit md:flex-row flex-col justify-between items-end">
+          <div className="relative z-[4] flex w-full h-full md:h-fit md:flex-row flex-col justify-between items-center">
             {/* Текст */}
-            <p className="self-start md:self-center text-white sm:text-[20px] sm:max-w-[420px] max-w-[350px] text-[18px] leading-[120%]">
+            <p className="self-start md:self-center text-white sm:text-[px] sm:max-w-[333px] max-w-[220px] text-[14px] leading-[120%]">
               Va nihoyat! Endi siz boshlang&apos;ich 30% tolov va birgina
               pasport bilan xalol muddatli to&apos;lovga iphone xarid qila
               olasiz
@@ -67,7 +67,7 @@ const Intro = ({ setOpen }: SetOpenType) => {
             {/* Кнопка */}
             <button
               onClick={() => setOpen(true)}
-              className="self-end md:self-end flex items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+              className="self-end md:self-center flex items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
             >
               <p className="text-primary text-center px-[20px] text-[16px]">
                 Harid qilish

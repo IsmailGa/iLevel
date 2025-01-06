@@ -61,7 +61,10 @@ const SectionEleven = () => {
   };
 
   return (
-    <section className="flex flex-col w-full sm:mt-[75px] mt-[65px]" id="contacts">
+    <section
+      className="flex flex-col w-full sm:mt-[75px] mt-[65px]"
+      id="contacts"
+    >
       <div className="grid bg-primary lg:grid-cols-2 grid-cols-1 items-center md:gap-[35px] gap-[25px] md:p-[35px] p-[25px] rounded-[25px] w-full">
         {/* LEFT SIDE DESCRIPTION */}
         <div className="flex flex-col md:gap-[45px] lg:gap-[75px] gap-[25px] relative">
@@ -97,17 +100,22 @@ const SectionEleven = () => {
               id="number"
               className="border-0 text-[18px] leading-[135%] w-full h-[50px] px-[25px] rounded-[25px] outline-0 bg-white text-black placeholder-[white/10]"
               placeholder="Telefon raqamingiz  (+998 XX XXX-XX-XX)"
-              pattern="\+998[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"
+              pattern="(\+998)?[0-9]{9}"
               required
             />
-            <input
-              type="text"
+            <select
               name="location"
               id="location"
               className="border-0 text-[18px] leading-[135%] w-full h-[50px] px-[25px] rounded-[25px] outline-0 bg-white text-black placeholder-[white/10]"
-              placeholder="Shahringiz yoki yashash joyingiz"
               required
-            />
+            >
+              <option value="" disabled selected >
+              Shahringiz yoki yashash joyingiz
+              </option>
+              <option value="Toshkentda">Toshkentda</option>
+              <option value="Vodiyda">Vodiyda</option>
+              <option value="Vohada">Vohada</option>
+            </select>
             <button
               type="submit"
               disabled={loading}

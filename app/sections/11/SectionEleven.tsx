@@ -3,6 +3,7 @@ import Image from "next/image";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import React, { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface FormElements extends HTMLFormControlsCollection {
   name: HTMLInputElement;
@@ -15,6 +16,7 @@ interface CustomForm extends HTMLFormElement {
 }
 
 const SectionEleven = () => {
+  const router = useRouter()
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -47,6 +49,9 @@ const SectionEleven = () => {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
+          setTimeout(() => {
+            router.push('/thank-you');
+          }, 500);
         }, 2000);
         form.reset();
       } else {

@@ -39,7 +39,7 @@ const SectionTen: React.FC = () => {
 
   return (
     <section className="flex flex-col w-full sm:mt-[75px] mt-[65px] gap-[35px]" id="faq">
-      <h1 className="md:text-[36px] text-[28px] leading-[135%] mb-4">
+      <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[135%] mb-4">
         Eng ko‘p so‘raladigan savollar:
       </h1>
 

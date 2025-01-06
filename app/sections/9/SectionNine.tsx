@@ -13,7 +13,7 @@ const SectionNine = ({ setOpen }: SetOpenType) => {
         {/* RIGHT */}
         <div className="flex flex-col gap-[35px]">
           {/* TITLE */}
-          <h1 className="md:text-[36px] text-[28px] leading-[135%]">
+          <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[135%]">
             <span className="text-primary">Bu</span> taklif siz uchun emas,
             Agar…
           </h1>
@@ -58,7 +58,7 @@ const SectionNine = ({ setOpen }: SetOpenType) => {
 
             <button
               onClick={() => setOpen(true)}
-              className="justify-self-end max-lg:max-xl:self-end max-lg:max-xl: mt-[100px] z-[50] max-lg:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+              className="justify-self-end max-lg:max-xl:self-end max-lg:max-xl: mt-[100px] z-[50] max-lg:justify-self-start flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] hover:bg-[rgba(255,255,255,0.1)] hover:border-primary transition-all duration-300 group"
             >
               <p className="text-white text-center px-[20px] text-[16px]">
                 Taklifdan foydalanish

@@ -7,28 +7,28 @@ const SectionTwo = () => {
       <div className="relative lg:flex-row xl:pr-[500px] lg:pr-[300px] sm:pr-[100px] flex flex-col w-full h-full items-center">
         {/* LEFT SIDE */}
         <div className="flex-col flex sm:gap-[35px] gap-[25px] max-w-[720px]">
-          <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
+          <h1 className="font-semiBold md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
             <span className="text-primary">iPhone</span> sotib
             ololmayotganingizning asosiy sababi
           </h1>
           <div className="w-full ">
             <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%]">
-              Do‘stim... <br />
+              <span className="font-semiBold md:text-[22px] max-md:max-lg:text-[20px] text-primary">Do‘stim...</span><br />
               Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
               sotib ololmaslik bilan bog‘liq muammo bor. <br />
               Yaxshi yangiligim shuki, siz bu muammoning aniq va sinalgan
               yechimini topasiz. <br />
-              Tayyor bo‘lsangiz, ketdik.... <br /> Biz sizni yaqindan
+              <span className="font-semiBold text-primary">Tayyor bo‘lsangiz, ketdik....</span><br /> Biz sizni yaqindan
               tanimaymiz.
               <br />
               Lekin iphone sotib ololmayotganingizning asosiy 2 ta sababi
               bo‘lishi mumkin.
               <br />
               <br />
-              Birinchisi, Yetarlicha mablag’ yo’qligi
+              <span className="font-semiBold text-primary">Birinchisi</span>, Yetarlicha mablag’ yo’qligi
               <br />
               <br />
-              Ikkinchisi, Yetarlicha mablag’ yo’qligi sabab bo’lib to’lashga
+              <span className="font-semiBold text-primary">Ikkinchisi</span>, Yetarlicha mablag’ yo’qligi sabab bo’lib to’lashga
               iphone xarid qilaman desangiz rasmiy ish joy, Toshkent propiska va
               kartadagi aylanma pullarni so’rashi
             </p>

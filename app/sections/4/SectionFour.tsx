@@ -18,7 +18,7 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
         ></div>
         {/* RIGHT SIDE */}
         <div className="flex-col text-right items-end flex sm:gap-[35px] gap-[25px] max-w-[720px]">
-          <h1 className="md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
+          <h1 className="font-semiBold md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
             <span className="text-primary">Xo‘sh</span>, iphonelarni qanday
             qilib bo’lib to’lashga olsa bo’ladi?
           </h1>
@@ -33,7 +33,7 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
           </div>
           <button
             onClick={() => setOpen(true)}
-            className="self-end flex items-center justify-between border-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
+            className="self-end flex items-center justify-between border-white border-[1px] hover:bg-[rgba(255,255,255,0.1)] hover:border-primary rounded-[25px] p-[3px] sm:h-[50px] h-[44px] transition-all duration-300 group"
           >
             <p className="text-white text-center px-[20px] text-[16px]">
               Harid qilish

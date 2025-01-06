@@ -12,11 +12,11 @@ const SectionSix = ({ setOpen }: SetOpenType) => {
     <section className="w-full sm:mt-[75px] mt-[65px] flex flex-col" id="6">
       <div className="bg-primary rounded-[25px] md:p-[35px] p-[25px]">
         <div className="flex flex-col sm:gap-[25px] gap-[18px] relative">
-          <h1 className="md:text-[36px] text-[28px] leading-[110%] max-w-[540px]">
+          <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[110%] max-w-[540px]">
             Kuting oling, ilevel apple gadjetlar do’koni
           </h1>
 
-          <div className="flex flex-col lg:flex-row sm:gap-[25px] gap-[18px] lg:gap-[200px] lg:items-end items-start">
+          <div className="flex flex-col lg:flex-row sm:gap-[25px] gap-[18px] lg:gap-[200px] lg:items-end justify-between items-start">
             <p className="md:text-[20px] text-[18px] leading-[135%] max-w-[735px]">
               ilevel do’konidan siz boshlang’ich 30% to’lov va birgina pasport
               bilan istalgan turdagi apple gadjetlarini xarid qilishingiz mumkin

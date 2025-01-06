@@ -9,6 +9,7 @@ type SetOpenType = {
 
 const SectionFour = ({ setOpen }: SetOpenType) => {
   return (
+<<<<<<< Updated upstream
     <section className="sm:mt-[95px] mt-[65px] w-full flex-col flex" id="2">
       <div className="relative lg:flex-row xl:pl-[500px] lg:pl-[300px] sm:pl-[100px] flex flex-col w-full h-full items-center justify-end">
         {/* LEFT SIDE */}
@@ -20,6 +21,22 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
         <div className="flex-col text-right items-end flex sm:gap-[35px] gap-[25px] max-w-[720px]">
           <h1 className="font-semiBold md:text-[36px] max-md:text-[28px] font-normal leading-[110%] max-w-[614px]">
             <span className="text-primary">Xo‘sh</span>, iphonelarni qanday
+=======
+    <section className="mt-[75px]" id="4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center relative" id="4">
+        {/* IMAGE */}
+        <div className="flex flex-col flex-1">
+          <Image
+            src={calculator}
+            alt="calculator"
+            className="w-full h-auto sm:w-[518px] sm:z-[-1] sm:absolute lg:static md:top-[-50%] sm:top-[0%] md:left-0 sm:left-[-20%]"
+          />
+        </div>
+        {/* IMAGE */}
+        {/* TEXTS */}
+        <div className="flex-col flex gap-[35px] items-end">
+          <h2 className="text-[36px] text-end leading-[41px]">
+            <span className="text-primary ">Xo‘sh</span>, iphonelarni qanday
             qilib bo’lib to’lashga olsa bo’ladi?
           </h1>
           <div className="w-full ">

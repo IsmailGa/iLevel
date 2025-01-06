@@ -20,17 +20,31 @@ const manropeB = Manrope({ subsets: ["latin"], weight: "500" });
 const Footer = () => {
   const handleClick = () => {
     window.scrollTo({
+<<<<<<< Updated upstream
       top: 0,
+=======
+      top: 0, 
+>>>>>>> Stashed changes
       behavior: "smooth",
     });
   };
 
   return (
+<<<<<<< Updated upstream
     <footer className="mt-[75px] relative pb-[30px] overflow-hidden">
+=======
+    <footer className="mt-[75px] pb-[30px] relative overflow-hidden">
+      <Image
+        src={rec}
+        alt="rect"
+        className="max-w-[292px] w-full absolute bottom-[-25%] z-[-1] left-[5%]"
+      />
+>>>>>>> Stashed changes
       <div className="w-full bg-gradient-to-r from-primary to-primary/50 h-[1px]"></div>
       <Container>
         <div className="mt-[65px] flex flex-col gap-[50px] ">
           {/* THE FIRST ROW */}
+<<<<<<< Updated upstream
           <div className="flex w-full justify-between relative">
             <div className="justify-self-start self-start">
               <div className="w-[65px] md:w-full">
@@ -54,6 +68,15 @@ const Footer = () => {
                 <Image src={rec} alt="rect" className="" />
               </div>
             </div>
+=======
+          <div className="flex justify-between ">
+            <Image
+              src={arrowUp}
+              alt="arrow up"
+              className="cursor-pointer"
+              onClick={handleClick}
+            />
+>>>>>>> Stashed changes
 
             {/* LINKS */}
             <ul className="flex gap-[45px] max-sm:max-md:gap-[25px] max-sm:max-md:flex-col max-sm:max-md:items-center uppercase font-[--pangram]">
@@ -146,7 +169,11 @@ const Footer = () => {
       <Image
         src={lines}
         alt="lines"
+<<<<<<< Updated upstream
         className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2 opacity-[50%]"
+=======
+        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] right-0"
+>>>>>>> Stashed changes
       />
     </footer>
   );

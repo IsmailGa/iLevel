@@ -28,13 +28,13 @@ export default function Home() {
         <SectionSeven setOpen={setOpen} />
         {/*== CATALOG ==*/}
         <SectionEight setOpen={setOpen} />
-        <SectionNine  setOpen={setOpen}/>
+        <SectionNine setOpen={setOpen} />
         <SectionTen />
         {/*== FORM ==*/}
         <SectionEleven />
         {/*== FORM ==*/}
-        <Modal open={open} setOpen={setOpen} />
       </div>
+      <Modal open={open} setOpen={setOpen} />
     </>
   );
 }

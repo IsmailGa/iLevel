@@ -59,7 +59,7 @@ const Intro = ({ setOpen }: SetOpenType) => {
           {/* Текст и кнопка */}
           <div className="relative z-[4] flex w-full h-full md:h-fit md:flex-row flex-col justify-between items-center">
             {/* Текст */}
-            <p className="self-start md:self-center text-white sm:text-[16px] sm:max-w-[333px] max-w-[220px] text-[14px] leading-[120%]">
+            <p className="self-start md:self-center text-white sm:text-[50px] sm:max-w-[333px] max-w-[220px] text-[14px] leading-[120%]">
               Va nihoyat! Endi siz boshlang&apos;ich 30% tolov va birgina
               pasport bilan xalol muddatli to&apos;lovga iphone xarid qila
               olasiz

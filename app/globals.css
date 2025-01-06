@@ -12,23 +12,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-<<<<<<< Updated upstream
 html,
 body {
-=======
-html, body {
->>>>>>> Stashed changes
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 .body-no-scroll {
-<<<<<<< Updated upstream
   overflow: hidden;
   height: 100%;
 }
-=======
-  overflow: hidden; 
-  height: 100%;
-}
->>>>>>> Stashed changes

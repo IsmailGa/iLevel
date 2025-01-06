@@ -133,17 +133,22 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
                   id="number"
                   className="border-0 text-[18px] leading-[135%] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placeholder-primary"
                   placeholder="Telefon raqamingiz  (+998 XX XXX-XX-XX)"
-                  pattern="\+998[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"
+                  pattern="(\+998)?[0-9]{9}"
                   required
                 />
-                <input
-                  type="text"
+                <select
                   name="location"
                   id="location"
-                  className="border-0 text-[18px] leading-[135%] w-full px-[25px] py-[15px] rounded-[25px] outline-0 bg-white text-black placeholder-primary"
-                  placeholder="Shahringiz yoki yashash joyingiz"
+                  className="border-0 text-[18px] leading-[135%] w-full h-[50px] px-[25px] rounded-[25px] outline-0 bg-white text-black placeholder-[white/10]"
                   required
-                />
+                >
+                  <option value="" disabled selected>
+                    Shahringiz yoki yashash joyingiz
+                  </option>
+                  <option value="Toshkentda">Toshkentda</option>
+                  <option value="Vodiyda">Vodiyda</option>
+                  <option value="Vohada">Vohada</option>
+                </select>
                 <button
                   type="submit"
                   disabled={loading}

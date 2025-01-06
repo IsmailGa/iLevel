@@ -4,6 +4,7 @@ import Image from "next/image";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import Container from "./container";
+import { useRouter } from 'next/navigation';  // Import useRouter
 
 interface ModalProps {
   setOpen: (value: boolean) => void;
@@ -21,6 +22,7 @@ interface CustomForm extends HTMLFormElement {
 }
 
 const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
+  const router = useRouter();  // Initialize useRouter
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -53,6 +55,10 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
+          setTimeout(() => {
+            setOpen(false);
+            router.push('/thank-you');
+          }, 500);
         }, 2000);
         form.reset();
       } else {
@@ -82,7 +88,6 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
     };
   }, [open]);
 
-  // Если модальное окно закрыто, ничего не рендерим
   if (!open) return null;
 
   return (

@@ -104,17 +104,15 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
 
           <div className="grid bg-primary lg:grid-cols-2 grid-cols-1 items-center md:gap-[35px] gap-[25px] md:p-[35px] p-[25px] rounded-[25px] w-full">
             {/* LEFT SIDE DESCRIPTION */}
-            <div className="flex flex-col md:gap-[45px] lg:gap-[75px] gap-[25px] relative">
-              <h1 className="md:text-[36px] text-[28px] leading-[135%]">
-                Yordam kerakmi? Bizning mutaxassislar javob berishga tayyor.
+            <div className="flex flex-col justify-between md:gap-[45px] lg:gap-[75px] gap-[25px] relative">
+              <h1 className="md:text-[36px] text-[28px] leading-[120%]">
+                Ro’yxatdan o’tish formasi
               </h1>
               <div className="absolute top-5 bottom-5 w-full">
                 <Image src={formDecor} alt="form decor" />
               </div>
               <p className="md:text-[20px] text-[18px] leading-[135%]">
-                Formani to‘ldiring, va bizning mutaxassislar siz bilan
-                bog‘lanishadi hamda qiziqtirayotgan savollar bo‘yicha
-                konsultatsiya berishadi.
+                Formani to‘ldiring, va bizning mutaxassislar siz bilan bog‘lanishadi hamda qiziqtirayotgan savollar bo‘yicha konsultatsiya berishadi.
               </p>
             </div>
             {/* RIGHT SIDE FORM */}

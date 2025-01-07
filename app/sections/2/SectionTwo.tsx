@@ -35,13 +35,13 @@ const SectionTwo = () => {
               <Image
                 src={rect_one}
                 alt="rect one"
-                className="z-[-10] absolute bottom-0 left-0 lg:translate-x-[-20%] lg:translate-y-[30%]"
+                className="z-[-10] absolute bottom-0 left-0 lg:translate-x-[-20%] lg:translate-y-[30%] translate-x-[-20%] translate-y-[-40%]"
               />
               <div className="flex flex-col h-full min-h-[196px] border-primary border-[1px] bg-primary/10 backdrop-blur-lg md:p-[35px] p-[25px] gap-[15px] rounded-[25px]">
                 <span className="font-semiBold text-primary text-[22px] leading-[135%]">Birinchisi</span>
                 <p className="text-[18px] font-normal">Yetarlicha mablag’ yo’qligi</p>
               </div>
-              <div className="flex flex-col h-full min-h-[196px] border-primary border-[1px] bg-primary/10 backdrop-blur-sm md:p-[35px] p-[25px] gap-[15px] rounded-[25px]">
+              <div className="flex flex-col h-full min-h-[196px] border-primary border-[1px] bg-primary/10 backdrop-blur-lg md:p-[35px] p-[25px] gap-[15px] rounded-[25px]">
                 <span className="font-semiBold text-primary text-[22px] leading-[135%]">Ikkinchisi</span>
                 <p className="text-[18px] font-normal">
                   Yetarlicha mablag’ yo’qligi sabab bo’lib to’lashga iphone xarid qilaman desangiz rasmiy ish

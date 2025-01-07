@@ -22,10 +22,13 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
             <span className="text-primary">Xo‘sh</span>, iphonelarni qanday
             qilib bo’lib to’lashga olsa bo’ladi?
           </h1>
-          <div className="w-full ">
-            <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%]">
+          <div className="w-full bg-primary rounded-[25px] flex flex-col gap-[25px] md:p-[35px] p-[25px]">
+            <h1 className="text-[22px] font-semiBold text-start max-w-[596px]">
               Sizni bo’lib to’lashga iphone xarid qilishdan to‘sib turgan narsa
-              bu.. Bo’lib to’lashga telefon xarid qilmoqchi bo’lganingizda
+              bu..
+            </h1>
+            <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%] flex flex-col gap-[25px] max-w-[596px] text-start">
+              Bo’lib to’lashga telefon xarid qilmoqchi bo’lganingizda
               sizdan Toshkent propiska, kartadagi aylanma va rasmiy ish joy
               so’rashlari Shuning uchun siz haligacha eski telefoningizni
               ishlatib yurishga majbur bo’lyapsiz

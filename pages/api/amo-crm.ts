@@ -1,12 +1,22 @@
 import axios from "axios";
 
+import { NextApiRequest, NextApiResponse } from "next";
+interface LeadData {
+  name: string;
+  number: string;
+  location: string;
+}
 
-export default async function handler(req, res) {
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Метод не доступен" });
   }
 
-  const { name, number, location } = req.body;
+  const { name, number, location }: LeadData = req.body;
 
   if (!name || !number || !location) {
     return res
@@ -32,7 +42,8 @@ export default async function handler(req, res) {
       "https://ilevelsalescrm.amocrm.ru/api/v4/leads",
       [
         {
-          name, // Имя
+          name,
+
         },
       ],
       {
@@ -46,14 +57,22 @@ export default async function handler(req, res) {
       message: "Сделка успешно создана в воронке!",
       lead: leadResponse.data,
     });
-  } catch (error) {
-    console.error(
-      "Ошибка при подключении к amoCRM:",
-      error.response?.data || error.message
-    );
-    res.status(500).json({
-      message: "Ошибка при подключении к amoCRM",
-      error: error.response?.data || error.message,
-    });
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error)) {
+      console.error(
+        "Ошибка при подключении к amoCRM:",
+        error.response?.data || error.message
+      );
+      return res.status(500).json({
+        message: "Ошибка при подключении к amoCRM",
+        error: error.response?.data || error.message,
+      });
+    } else {
+      console.error("Неизвестная ошибка:", error);
+      return res.status(500).json({
+        message: "Неизвестная ошибка",
+        error: "Что-то пошло не так.",
+      });
+    }
   }
 }

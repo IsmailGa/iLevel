@@ -4,7 +4,8 @@ import Image from "next/image";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import Container from "./container";
-import { useRouter } from 'next/navigation';  // Import useRouter
+import { useRouter } from 'next/navigation';
+import axios from "axios";
 
 interface ModalProps {
   setOpen: (value: boolean) => void;
@@ -43,7 +44,18 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
     };
 
     try {
-      const response = await fetch("/api/google-sheets", {
+      const response = await axios.get(
+        "https://ilevelsalescrm.amocrm.ru/api/v4/custom_fields",
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+          },
+        }
+      );
+      
+      console.log(response.data);
+
+      const googleResponse = await fetch("/api/google-sheets", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +63,15 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const amoCRMResponse = await fetch("/api/amo-crm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (googleResponse.ok && amoCRMResponse.ok) {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
@@ -78,6 +98,7 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
   };
 
   useEffect(() => {
+    
     if (open) {
       document.body.style.position = "fixed";
     } else {

@@ -1,12 +1,18 @@
 import axios from "axios";
-require("dotenv").config();
+import { NextApiRequest, NextApiResponse } from "next";
+interface LeadData {
+    name: string;
+    number: string;
+    location: string;
+  }
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
+export default async function handler(req:NextApiRequest, res:NextApiResponse) {
+
+    if (req.method !== "POST") {
     return res.status(405).json({ message: "Метод не доступен" });
   }
 
-  const { name, number, location } = req.body;
+  const { name, number, location }: LeadData = req.body;
 
   if (!name || !number || !location) {
     return res
@@ -32,17 +38,7 @@ export default async function handler(req, res) {
       "https://ilevelsalescrm.amocrm.ru/api/v4/leads",
       [
         {
-          name, // Имя
-          custom_fields_values: [
-            {
-              field_id: process.env.PHONE_FIELD_ID, // ID поля для телефона (найди в настройках amoCRM)
-              values: [{ value: number }],
-            },
-            {
-              field_id: process.env.LOCATION_FIELD_ID, // ID поля для адреса (найди в настройках amoCRM)
-              values: [{ value: location }],
-            },
-          ],
+          name, 
         },
       ],
       {

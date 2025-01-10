@@ -7,11 +7,6 @@ interface LeadData {
   location: string;
 }
 
-interface TokenResponse {
-  access_token: string;
-  refresh_token: string;
-}
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -31,29 +26,35 @@ export default async function handler(
   }
 
   try {
-    // ПОЛУЧЕНИЕ ТОКЕНА
-    const accessToken = await getAccessToken();
+    // Долгосрочный токен
+    const accessToken = process.env.ACCESS_TOKEN;
 
+    if (!accessToken) {
+      throw new Error("ACCESS_TOKEN не найден. Добавьте его в .env файл.");
+    }
+
+    // Формирование данных для сделки
     const leadData = [
       {
         name,
         custom_fields_values: [
           {
-            field_id: 1272235,
+            field_id: 1272235, // ID кастомного поля "Имя клиента"
             values: [{ value: name }],
           },
           {
-            field_id: 1272237, 
+            field_id: 1272237, // ID кастомного поля "Номер телефона"
             values: [{ value: number }],
           },
           {
-            field_id: 1272239,
+            field_id: 1272239, // ID кастомного поля "Локация клиента"
             values: [{ value: location }],
           },
         ],
       },
     ];
 
+    // Запрос на создание сделки
     const leadResponse = await axios.post(
       "https://ilevelsalescrm.amocrm.ru/api/v4/leads",
       leadData,
@@ -86,46 +87,4 @@ export default async function handler(
       });
     }
   }
-}
-
-// ОБНОВИТЬ ТОКЕН
-async function refreshAccessToken(): Promise<string> {
-  try {
-    const response = await axios.post<TokenResponse>(
-      "https://ilevelsalescrm.amocrm.ru/oauth2/access_token",
-      {
-        client_id: process.env.CLIENT_ID,
-        client_secret: process.env.SECRET_KEY,
-        redirect_uri: process.env.AMO_REDIRECT_URI,
-        grant_type: "refresh_token",
-        refresh_token: process.env.REFRESH_TOKEN,
-      }
-    );
-
-    const { access_token, refresh_token } = response.data;
-
-    process.env.ACCESS_TOKEN = access_token;
-    process.env.REFRESH_TOKEN = refresh_token;
-
-    return access_token;
-  } catch (error: unknown) {
-    if (axios.isAxiosError(error)) {
-      console.error(
-        "Ошибка обновления токена:",
-        error.response?.data || error.message
-      );
-    } else {
-      console.error("Неизвестная ошибка:", error);
-    }
-    throw new Error("Не удалось обновить токен.");
-  }
-}
-
-// ПОЛУЧИТЬ ТОКЕН
-async function getAccessToken(): Promise<string> {
-  if (!process.env.ACCESS_TOKEN) {
-    // Если токена нет, обновить его
-    return await refreshAccessToken();
-  }
-  return process.env.ACCESS_TOKEN!;
 }

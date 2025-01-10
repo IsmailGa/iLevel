@@ -37,15 +37,22 @@ const SectionEleven = () => {
     };
 
     try {
-      const response = await fetch("/api/google-sheets", {
+      const googleResponse = await fetch("/api/google-sheets", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+      const amoCRMResponse = await fetch("/api/amo-crm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-      if (response.ok) {
+      if (googleResponse.ok && amoCRMResponse.ok) {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
@@ -115,7 +122,7 @@ const SectionEleven = () => {
               required
             >
               <option value="" disabled selected >
-              Shahringiz yoki yashash joyingiz
+                Shahringiz yoki yashash joyingiz
               </option>
               <option value="Toshkentda">Toshkentda</option>
               <option value="Vodiyda">Vodiyda</option>

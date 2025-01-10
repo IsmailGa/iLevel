@@ -33,16 +33,6 @@ export default async function handler(req, res) {
       [
         {
           name, // Имя
-          custom_fields_values: [
-            {
-              field_id: process.env.PHONE_FIELD_ID, // ID поля для телефона (найди в настройках amoCRM)
-              values: [{ value: number }],
-            },
-            {
-              field_id: process.env.LOCATION_FIELD_ID, // ID поля для адреса (найди в настройках amoCRM)
-              values: [{ value: location }],
-            },
-          ],
         },
       ],
       {

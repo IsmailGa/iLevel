@@ -23,7 +23,7 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
             qilib bo’lib to’lashga olsa bo’ladi?
           </h1>
           <div className="w-full bg-primary rounded-[25px] flex flex-col gap-[25px] md:p-[35px] p-[25px]">
-            <h1 className="text-[22px] font-semiBold text-start max-w-[596px]">
+            <h1 className="text-[22px] font-semiBold text-start max-w-[596px] leading-[110%]">
               Sizni bo’lib to’lashga iphone xarid qilishdan to‘sib turgan narsa
               bu..
             </h1>

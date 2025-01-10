@@ -14,7 +14,7 @@ const SectionTwo = () => {
             ololmayotganingizning asosiy sababi
           </h1>
           <div className="w-full flex flex-col gap-[25px]">
-            <div className=" bg-primary p-[35px] rounded-[25px] ">
+            <div className=" bg-primary md:p-[35px] p-[25px] rounded-[25px] flex flex-col gap-[15px]">
               <span className="font-semiBold md:text-[22px] max-md:max-lg:text-[20px] ">Do‘stim...</span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
                 Siz hozir ushbu sahifada ekansiz, demak sizda iphone telefonini
@@ -24,7 +24,7 @@ const SectionTwo = () => {
 
               </p>
             </div>
-            <div className="bg-primary p-[35px] rounded-[25px]">
+            <div className="bg-primary md:p-[35px] p-[25px] rounded-[25px] flex flex-col gap-[15px]">
               <span className="font-semiBold md:text-[22px] max-md:max-lg:text-[20px]">Tayyor bo‘lsangiz, ketdik....</span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
                 Biz sizni yaqindan tanimaymiz. <br /> Lekin iphone sotib ololmayotganingizning asosiy 2 ta sababi bo‘lishi mumkin.

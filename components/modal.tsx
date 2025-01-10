@@ -44,17 +44,6 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
     };
 
     try {
-      const response = await axios.get(
-        "https://ilevelsalescrm.amocrm.ru/api/v4/custom_fields",
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
-          },
-        }
-      );
-      
-      console.log(response.data);
-
       const googleResponse = await fetch("/api/google-sheets", {
         method: "POST",
         headers: {

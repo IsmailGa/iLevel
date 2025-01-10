@@ -5,7 +5,6 @@ import arrow from "@/assets/arrow_diagonal_white.svg";
 import formDecor from "@/public/assets/form_decor.svg";
 import Container from "./container";
 import { useRouter } from 'next/navigation';
-import axios from "axios";
 
 interface ModalProps {
   setOpen: (value: boolean) => void;

@@ -11,6 +11,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+
+    
     if (open) {
       document.documentElement.style.overflow = "hidden";
     } else {

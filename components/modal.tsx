@@ -157,9 +157,9 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
                   <option value="" disabled selected>
                     Shahringiz yoki yashash joyingiz
                   </option>
-                  <option value="Toshkentda">Toshkentda</option>
-                  <option value="Vodiyda">Vodiyda</option>
-                  <option value="Vohada">Vohada</option>
+                  <option value="Toshkentda">Toshkentda yashayman</option>
+                  <option value="Vodiyda">Vodiyda yashayman</option>
+                  <option value="Vohada">Vohada yashayman</option>
                 </select>
                 <button
                   type="submit"

@@ -43,14 +43,6 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
     };
 
     try {
-      const googleResponse = await fetch("/api/google-sheets", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
       const amoCRMResponse = await fetch("/api/amo-crm", {
         method: "POST",
         headers: {
@@ -59,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
         body: JSON.stringify(formData),
       })
 
-      if (googleResponse.ok && amoCRMResponse.ok) {
+      if (amoCRMResponse.ok) {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);

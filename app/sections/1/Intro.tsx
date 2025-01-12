@@ -18,7 +18,7 @@ const Intro = ({ setOpen }: SetOpenType) => {
       className="w-full flex flex-col items-center xl:pt-[175px] md:pt-[160px] xs:pt-[130px] pt-[18vw] relative justify-center"
       id="aboutus"
     >
-      <div className="absolute top-[2%] w-full z-[-1]">
+      <div className="absolute sm:top-[2%] top-[1%] w-full z-[-1]">
         {/* Первое изображение: отображается на lg и больше */}
         <Image src={banner} alt="banner" className="hidden lg:block w-full" />
         {/* Второе изображение: отображается от sm до lg */}
@@ -36,11 +36,11 @@ const Intro = ({ setOpen }: SetOpenType) => {
       </div>
       {/* Основной блок */}
 
-      <div className="relative bg-primary w-full 2xl:h-[677px] xl:h-[677px] lg:h-[600px] md:h-[300px] h-[380px] rounded-[35px] p-[24px] md:p-[35px] flex flex-col items-center">
+      <div className="relative bg-primary w-full 2xl:h-[777px] xl:h-[750px] lg:h-[700px] md:h-[650px] sm:h-[600px] h-[450px] rounded-[35px] p-[24px] md:p-[35px] flex flex-col items-center">
         {/* Фоновые линии */}
 
         {/* iPhone */}
-        <div className="absolute w-full z-[3] lg:w-[94%] md:w-[105%] md:top-[25%] md:translate-y-[0] top-[50%] translate-y-[-50%] max-md:w-[114%]">
+        <div className="absolute w-full z-[3] lg:w-[94%] md:w-[105%] lg:top-[35%] md:top-[35%] md:translate-y-[0] top-[50%] translate-y-[-50%] max-md:w-[114%]">
           <Image
             src={iPhone}
             alt="iPhone 16"

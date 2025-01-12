@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         {/* Add noscript fallback for Pixel */}
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             style={{ display: 'none' }}

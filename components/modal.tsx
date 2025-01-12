@@ -43,14 +43,6 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
     };
 
     try {
-      const googleResponse = await fetch("/api/google-sheets", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
       const amoCRMResponse = await fetch("/api/amo-crm", {
         method: "POST",
         headers: {
@@ -59,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
         body: JSON.stringify(formData),
       })
 
-      if (googleResponse.ok && amoCRMResponse.ok) {
+      if (amoCRMResponse.ok) {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
@@ -157,9 +149,9 @@ const Modal: React.FC<ModalProps> = ({ setOpen, open }) => {
                   <option value="" disabled selected>
                     Shahringiz yoki yashash joyingiz
                   </option>
-                  <option value="Toshkentda">Toshkentda</option>
-                  <option value="Vodiyda">Vodiyda</option>
-                  <option value="Vohada">Vohada</option>
+                  <option value="Toshkentda">Toshkentda yashayman</option>
+                  <option value="Vodiyda">Vodiyda yashayman</option>
+                  <option value="Vohada">Vohada yashayman</option>
                 </select>
                 <button
                   type="submit"

@@ -15,19 +15,19 @@ const SectionTen: React.FC = () => {
     },
     {
       question:
-        "Telefonlarni 3 oydan 12 oygacha hech qanday foizlarsiz bo’lib to’lashga beramiz",
+        "Viloyatlarga yetkazish berish xizmati bormi?",
       answer:
-        "Bo‘lib to‘lash nafaqat telefonlar uchun, balki boshqa texnika va gadjetlar uchun ham mavjud.",
+        "Ha albatta, bizda telefonlarni O’zbekiston bo’ylab yetkazib berish hizmati mavjud",
     },
     {
       question: "Telefonlarga kafolat berasizlarmi?",
       answer:
-        "Bo‘lib to‘lash nafaqat telefonlar uchun, balki boshqa texnika va gadjetlar uchun ham mavjud.",
+        "Biz yangi telefonlarimizga 6 oy kafolat beramiz",  
     },
     {
-      question: "Do’koniglarni manzili qayerda joylashgan??",
+      question: "Do’koniglarni manzili qayerda joylashgan?",
       answer:
-        "Bo‘lib to‘lash nafaqat telefonlar uchun, balki boshqa texnika va gadjetlar uchun ham mavjud.",
+        "Toshkent shahri, malika bozori, A19 do’kon",
     },
   ];
 

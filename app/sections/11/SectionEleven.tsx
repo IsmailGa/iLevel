@@ -114,7 +114,7 @@ const SectionEleven = () => {
               className="border-0 text-[18px] leading-[135%] w-full h-[50px] px-[25px] rounded-[25px] outline-0 bg-white text-black placeholder-[white/10]"
               required
             >
-              <option value="" disabled selected >
+              <option value="" disabled  >
                 Shahringiz yoki yashash joyingiz
               </option>
               <option value="Toshkentda">Toshkentda yashayman</option>

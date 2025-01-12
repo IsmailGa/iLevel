@@ -15,6 +15,7 @@ import SectionNine from "./sections/9/SectionNine";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="md:pt-[60px] pt-[45px] w-full">

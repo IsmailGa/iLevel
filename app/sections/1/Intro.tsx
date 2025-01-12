@@ -7,6 +7,7 @@ import iPhone_text from "@/assets/iPhone_16_text.svg";
 import iPhone from "@/assets/iPhone_banner.png";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 
+{/* Type */}
 type SetOpenType = {
   setOpen: (value: boolean) => void;
 };

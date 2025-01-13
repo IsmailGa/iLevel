@@ -5,7 +5,7 @@ import rect_two from "@/public/assets/section_two/rectangle_two.png"
 
 const SectionTwo = () => {
   return (
-    <section className="sm:mt-[95px] mt-[65px] w-full flex-col flex" id="2">
+    <section className="sm:pt-[95px] pt-[65px] w-full flex-col flex" id="2">
       <div className="flex flex-col w-full h-full items-center">
         {/* LEFT SIDE */}
         <div className="flex-col flex sm:gap-[35px] gap-[25px] w-full">

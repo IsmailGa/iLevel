@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PPPangramSansRounded-Semibold";
+  src: url('./fonts/PPPangramSansRounded-Semibold.otf');
+}
+
 * {
   box-sizing: border-box;
 }

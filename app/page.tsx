@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="md:pt-[60px] pt-[45px] w-full">
+      <div className="md:pt-[30px] pt-[35px] w-full">
         <Intro setOpen={setOpen}/>
         <SectionTwo />
         <SectionThree setOpen={setOpen} />

@@ -13,7 +13,7 @@ type SetOpenType = {
 const SectionSeven = ({ setOpen }: SetOpenType) => {
   return (
     <section
-      className={`sm:mt-[75px] mt-[65px] w-full flex flex-col sm:gap-[35px] gap-[25px]`}
+      className={`sm:pt-[75px] pt-[65px] w-full flex flex-col sm:gap-[35px] gap-[25px]`}
       id="catalog"
     >
       <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[135%] max-w-[576px] text-end self-end">

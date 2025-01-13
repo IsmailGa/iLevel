@@ -137,7 +137,7 @@ const Footer = () => {
                   "uppercase text-[16px] font-[500]  " + manropeB.className
                 }
               >
-                Разработано VBS
+                Разработано Vortex Agency
               </h1>
             </div>
           </div>

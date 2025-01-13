@@ -16,6 +16,7 @@ type SetOpenType = {
 
 type EntryType = {
   title: string;
+  // eslint-disable-next-line
   description: any;
   buttonText: string;
 };

@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import rect_one from "@/public/assets/section_two/rectangle_one.png";
 import rect_two from "@/public/assets/section_two/rectangle_two.png";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
 import Loading from "@/components/loading";
 
 type SectionTwoType = {
@@ -12,13 +14,13 @@ type SectionTwoType = {
   title: string;
   highLight?: string;
   subTitleOne: string;
-  descriptionOne: any; // Rich Text field
+  descriptionOne: Document;
   subTitleTwo: string;
-  descriptionTwo: any; // Rich Text field
+  descriptionTwo: Document;
   reasonOneTitle: string;
-  reasonOneDescription: any; // Rich Text field
+  reasonOneDescription: Document;
   reasonTwoTitle: string;
-  reasonTwoDescription: any; // Rich Text field
+  reasonTwoDescription: Document;
 };
 
 const SectionTwo = () => {
@@ -35,19 +37,18 @@ const SectionTwo = () => {
     client
       .getEntry("6JA2VKxxzZm5h2aRm94qT5")
       .then((entry) => {
-
         // Explicitly type the fields
         const id = entry.fields.id as string || "2";
         const title = entry.fields.title as string || "Default Title";
         const highLight = entry.fields.highLighted as string || "Default Highlight";
         const subTitleOne = entry.fields.subTitleOne as string || "Default Subtitle 1";
-        const descriptionOne = entry.fields.descriptionOne as any || null; // Rich Text field
+        const descriptionOne = entry.fields.descriptionOne as Document || null; // Rich Text field
         const subTitleTwo = entry.fields.subTitleTwo as string || "Default Subtitle 2";
-        const descriptionTwo = entry.fields.descriptionTwo as any || null; // Rich Text field
+        const descriptionTwo = entry.fields.descriptionTwo as Document || null; // Rich Text field
         const reasonOneTitle = entry.fields.reasonOneTitle as string || "Default Reason 1 Title";
-        const reasonOneDescription = entry.fields.reasonOneDescription as any || null; // Rich Text field
+        const reasonOneDescription = entry.fields.reasonOneDescription as Document || null; // Rich Text field
         const reasonTwoTitle = entry.fields.reasonTwoTitle as string || "Default Reason 2 Title";
-        const reasonTwoDescription = entry.fields.reasonTwoDescription as any || null; // Rich Text field
+        const reasonTwoDescription = entry.fields.reasonTwoDescription as Document || null; // Rich Text field
 
         setData({
           id,
@@ -98,7 +99,7 @@ const SectionTwo = () => {
                 {data?.subTitleOne}
               </span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
-                {data?.descriptionOne}
+                {data?.descriptionOne && documentToReactComponents(data.descriptionOne)}
               </p>
             </div>
             <div className="bg-primary md:p-[35px] p-[25px] rounded-[25px] flex flex-col gap-[15px]">

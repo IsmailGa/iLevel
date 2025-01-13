@@ -7,7 +7,6 @@ import iPhone_text from "@/assets/iPhone_16_text.svg";
 import iPhone from "@/assets/iPhone_banner.png";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Loading from "@/components/loading";
 
 type SetOpenType = {

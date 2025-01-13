@@ -38,3 +38,6 @@ next-env.d.ts
 
 #google 
 ultra-airway-441309-c3-c6053f2c5d7e.json
+
+#zip files
+*.zip

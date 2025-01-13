@@ -8,7 +8,7 @@ type SetOpenType = {
 
 const SectionNine = ({ setOpen }: SetOpenType) => {
   return (
-    <section className="sm:mt-[75px] mt-[65px] flex flex-col w-full" id="9">
+    <section className="sm:pt-[75px] pt-[65px] flex flex-col w-full" id="9">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
         {/* RIGHT */}
         <div className="flex flex-col gap-[35px]">

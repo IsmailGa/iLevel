@@ -9,7 +9,7 @@ type SetOpenType = {
 const SectionThree = ({ setOpen }: SetOpenType) => {
   return (
     <section
-      className="mt-[75px] flex-col flex sm:gap-[35px] gap-[25px]"
+      className="pt-[75px] flex-col flex sm:gap-[35px] gap-[25px]"
       id="3"
     >
       {/* TITLE */}

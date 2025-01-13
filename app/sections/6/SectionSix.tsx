@@ -9,7 +9,7 @@ type SetOpenType = {
 
 const SectionSix = ({ setOpen }: SetOpenType) => {
   return (
-    <section className="w-full sm:mt-[75px] mt-[65px] flex flex-col" id="6">
+    <section className="w-full sm:pt-[75px] pt-[65px] flex flex-col" id="6">
       <div className="bg-primary rounded-[25px] md:p-[35px] p-[25px]">
         <div className="flex flex-col sm:gap-[25px] gap-[18px] relative">
           <h1 className="font-semiBold md:text-[36px] text-[28px] leading-[110%] max-w-[540px]">

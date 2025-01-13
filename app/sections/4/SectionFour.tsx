@@ -9,7 +9,7 @@ type SetOpenType = {
 
 const SectionFour = ({ setOpen }: SetOpenType) => {
   return (
-    <section className="sm:mt-[95px] mt-[65px] w-full flex-col flex" id="2">
+    <section className="sm:pt-[95px] pt-[65px] w-full flex-col flex" id="2">
       <div className="relative lg:flex-row xl:pl-[500px] lg:pl-[300px] sm:pl-[100px] flex flex-col w-full h-full items-center justify-end">
         {/* LEFT SIDE */}
         <div

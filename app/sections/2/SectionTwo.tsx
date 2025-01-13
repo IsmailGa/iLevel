@@ -14,9 +14,9 @@ type SectionTwoType = {
   title: string;
   highLight?: string;
   subTitleOne: string;
-  descriptionOne: Document;
+  descriptionOne: string;
   subTitleTwo: string;
-  descriptionTwo: Document;
+  descriptionTwo: string;
   reasonOneTitle: string;
   reasonOneDescription: Document;
   reasonTwoTitle: string;
@@ -42,14 +42,14 @@ const SectionTwo = () => {
         const title = entry.fields.title as string || "Default Title";
         const highLight = entry.fields.highLighted as string || "Default Highlight";
         const subTitleOne = entry.fields.subTitleOne as string || "Default Subtitle 1";
-        const descriptionOne = entry.fields.descriptionOne as Document || null; // Rich Text field
+        const descriptionOne = entry.fields.descriptionOne as string;
         const subTitleTwo = entry.fields.subTitleTwo as string || "Default Subtitle 2";
-        const descriptionTwo = entry.fields.descriptionTwo as Document || null; // Rich Text field
+        const descriptionTwo = entry.fields.descriptionTwo as string;
         const reasonOneTitle = entry.fields.reasonOneTitle as string || "Default Reason 1 Title";
         const reasonOneDescription = entry.fields.reasonOneDescription as Document || null; // Rich Text field
         const reasonTwoTitle = entry.fields.reasonTwoTitle as string || "Default Reason 2 Title";
         const reasonTwoDescription = entry.fields.reasonTwoDescription as Document || null; // Rich Text field
-
+        console.log("Description One:", data?.descriptionOne);
         setData({
           id,
           title,
@@ -99,7 +99,7 @@ const SectionTwo = () => {
                 {data?.subTitleOne}
               </span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
-                {data?.descriptionOne && documentToReactComponents(data.descriptionOne)}
+                {data?.descriptionOne}F
               </p>
             </div>
             <div className="bg-primary md:p-[35px] p-[25px] rounded-[25px] flex flex-col gap-[15px]">
@@ -107,7 +107,7 @@ const SectionTwo = () => {
                 {data?.subTitleTwo}
               </span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
-                {data?.descriptionTwo && documentToReactComponents(data.descriptionTwo)}
+                {data?.descriptionTwo}
               </p>
             </div>
 

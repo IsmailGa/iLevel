@@ -2,7 +2,6 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import arrow from "@/assets/arrow_diagonal.svg";
 import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Loading from "@/components/loading";
 
 type SetOpenType = {

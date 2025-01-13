@@ -31,8 +31,7 @@ const SectionTen: React.FC = () => {
       .then((entry) => {
         const id = entry.fields.id as string || "faq";
         const title = entry.fields.title as string || "Eng ko‘p so‘raladigan savollar";
-
-        // Fetch linked Question entries
+        // eslint-disable-next-line
         const questions = entry.fields.questions as any[];
         const questionPromises = questions.map((question) =>
           client.getEntry(question.sys.id)

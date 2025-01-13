@@ -99,7 +99,7 @@ const SectionTwo = () => {
                 {data?.subTitleOne}
               </span>
               <p className="md:text-[20px] w-full max-md:max-lg:text-[18px] font-medium max-w-[720px] leading-[135%]">
-                {data?.descriptionOne}F
+                {data?.descriptionOne}
               </p>
             </div>
             <div className="bg-primary md:p-[35px] p-[25px] rounded-[25px] flex flex-col gap-[15px]">

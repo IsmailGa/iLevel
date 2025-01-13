@@ -7,12 +7,42 @@ import iPhone_text from "@/assets/iPhone_16_text.svg";
 import iPhone from "@/assets/iPhone_banner.png";
 import arrow from "@/assets/arrow_diagonal_white.svg";
 
+import { createClient } from "contentful";
+
 {/* Type */}
 type SetOpenType = {
   setOpen: (value: boolean) => void;
 };
 
+
 const Intro = ({ setOpen }: SetOpenType) => {
+  const [title, setTitle] = React.useState("Loading...");
+
+  React.useEffect(() => {
+    // alert(process.env.CONTENTFUL_SPACE_ID + "," + process.env.CONTENTFUL_ACCESS_TOKEN)
+    const client = createClient({
+      space: process.env.CONTENTFUL_SPACE_ID || "vjvocirbh2wg",
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "tv3pq6fUrJ8kveaiDDz5D4rdx0hOjQLLGNZlE_WBc6k",
+    });
+
+    client
+      .getEntry("6wVGQRyC2Jp9Bp00taEwDh") // entry_id
+      .then((entry) => {
+        const titleField = entry.fields.heroTitle;
+        console.log(entry)
+        if (typeof titleField === "string") {
+          setTitle(titleField);
+        } else {
+          console.error("Title is not a string:", titleField);
+          setTitle("Invalid title format");
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching data from Contentful:", err);
+        setTitle("Error loading title");
+      });
+    }, []);
+
   return (
     <section
       className="w-full flex flex-col items-center xl:pt-[175px] md:pt-[160px] xs:pt-[130px] pt-[18vw] relative justify-center"
@@ -49,11 +79,10 @@ const Intro = ({ setOpen }: SetOpenType) => {
         </div>
         <div className="relative flex flex-col justify-between h-full w-full">
           <p className="self-start text-white sm:text-[28px] sm:max-w-[755px] max-w-[350px] text-[18px] leading-[120%]">
-            <span className="text-[37px]">
-              Va nihoyat!
-            </span> <br /> <br />Endi siz boshlang&apos;ich 30% tolov va birgina
-            pasport bilan xalol muddatli to&apos;lovga iphone xarid qila
-            olasiz
+            <span className="text-[37px]">Va nihoyat!</span> 
+            <br/>
+            <br/>
+            {title}
           </p>
           {/* Текст iPhone 16 */}
           <div className="absolute md:bottom-[35%] bottom-[35%] translate-y-[60%] z-[2] flex items-center justify-center">

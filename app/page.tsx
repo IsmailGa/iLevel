@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <div className="md:pt-[60px] pt-[45px] w-full">
-        <Intro setOpen={setOpen} />
+        <Intro setOpen={setOpen}/>
         <SectionTwo />
         <SectionThree setOpen={setOpen} />
         <SectionFour setOpen={setOpen} />

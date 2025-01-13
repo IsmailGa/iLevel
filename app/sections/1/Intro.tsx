@@ -84,7 +84,7 @@ const Intro = ({ setOpen }: SetOpenType) => {
           <div className="flex flex-col gap-[12px] text-white md:text-[22px] text-[18px] md:max-w-[650px] max-w-[365px] leading-[120%]">
             <h4 className="md:text-[32px] text-[26px] font-semiBold">{entry?.title || "No title available"}</h4> 
             <p>
-              {entry?.title || "No title available"}
+              {entry?.description || "No title available"}
             </p>
           </div>
             {/*        IPHONE TEXT    */}

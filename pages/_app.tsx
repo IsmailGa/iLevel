@@ -33,5 +33,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </noscript>
       <Component {...pageProps} />
     </>
-  );
+  )
 }

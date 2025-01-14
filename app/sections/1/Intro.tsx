@@ -25,6 +25,10 @@ const Intro = ({ setOpen }: SetOpenType) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const handleClick = () => {
+    setOpen(true)
+  }
+
   useEffect(() => {
     const client = createClient({
       space: process.env.CONTENTFUL_SPACE_ID || "76bjqmvfjih6",
@@ -68,7 +72,7 @@ const Intro = ({ setOpen }: SetOpenType) => {
 
   return (
     <section
-     className="w-full flex flex-col items-center xl:pt-[150px] md:pt-[130px] xs:pt-[110px] pt-[18vw] relative justify-center"
+      className="w-full flex flex-col items-center xl:pt-[150px] md:pt-[130px] xs:pt-[110px] pt-[18vw] relative justify-center"
       id="aboutus"
     >
       <div className="absolute sm:top-[2%] top-[1%] w-full z-[-1]">
@@ -82,17 +86,17 @@ const Intro = ({ setOpen }: SetOpenType) => {
         </div>
         <div className="relative flex lg:flex-row lg:items-end lg:gap-[200px] flex-col justify-between h-full w-full">
           <div className="flex flex-col gap-[12px] text-white md:text-[22px] text-[18px] md:max-w-[650px] max-w-[365px] leading-[120%]">
-            <h4 className="md:text-[32px] text-[26px] font-semiBold">{entry?.title || "No title available"}</h4> 
+            <h4 className="md:text-[32px] text-[26px] font-semiBold">{entry?.title || "No title available"}</h4>
             <p>
               {entry?.description || "No title available"}
             </p>
           </div>
-            {/*        IPHONE TEXT    */}
+          {/*        IPHONE TEXT    */}
           <div className="absolute xl:bottom-[60%] lg:bottom-[65%] xs:bottom-[35%] translate-y-[60%] bottom-[28%] z-[2] flex items-center justify-center">
             <Image src={iPhone_text} alt="iPhone 16 Text" className="w-full h-auto object-contain" />
           </div>
           <button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             className="self-end md:self-end flex flex-shrink-0 items-center justify-between bg-white border-[1px] rounded-[25px] p-[3px] sm:h-[50px] h-[44px] group"
           >
             <p className="text-primary text-center px-[20px] text-[16px]">{entry?.buttonText || "Default Button"}</p>

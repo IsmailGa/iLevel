@@ -85,7 +85,7 @@ const SectionFour = ({ setOpen }: SetOpenType) => {
             <span className="text-primary">{data?.highLight}</span> {data?.title}
           </h1>
           <div className="w-full bg-primary rounded-[25px] flex flex-col gap-[25px] md:p-[35px] p-[25px]">
-            <h1 className="text-[22px] font-semiBold font-semibold text-start max-w-[596px] leading-[110%]">
+            <h1 className="text-[22px] font-semiBold text-start max-w-[596px] leading-[110%]">
               {data?.subTitle}
             </h1>
             <p className="md:text-[20px] max-md:max-lg:text-[18px] leading-[135%] flex flex-col gap-[25px] font-medium max-w-[596px] text-start">

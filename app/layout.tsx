@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/header";
 import Container from "@/components/container";
+import MetaPixel from "@/components/meta-pixel"; // подключение скрипта
 import localFont from "next/font/local";
 import { FC, ReactNode } from "react";
 import "./globals.css";
@@ -29,6 +30,9 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
           </main>
           <Footer />
         </div>
+
+        {/* Meta Pixel */}
+        <MetaPixel />
       </body>
     </html>
   );

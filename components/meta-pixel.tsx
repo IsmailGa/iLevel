@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Script from "next/script";
 
 export default function MetaPixel() {
@@ -25,11 +26,12 @@ export default function MetaPixel() {
         }}
       />
       <noscript>
-        <img
+        <Image
           height="1"
           width="1"
           style={{ display: "none" }}
           src="https://www.facebook.com/tr?id=880165347354430&ev=PageView&noscript=1"
+          alt=""
         />
       </noscript>
     </>

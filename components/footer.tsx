@@ -10,6 +10,7 @@ import {
 } from "@/public/assets/icons";
 import rec from "@/public/assets/rectangle.png";
 import lines from "@/public/assets/2d_lines.svg";
+import logo from "@/public/assets/slogan-logo.svg";
 import React from "react";
 import { Manrope } from "next/font/google";
 import Link from "next/link";
@@ -29,7 +30,7 @@ const Footer = () => {
     <footer className="mt-[75px] relative pb-[30px] overflow-hidden">
       <div className="w-full bg-gradient-to-r from-primary to-primary/50 h-[1px]"></div>
       <Container>
-        <div className="mt-[65px] flex flex-col gap-[50px] ">
+        <div className="mt-[65px] flex flex-col gap-[35px] ">
           {/* THE FIRST ROW */}
           <div className="flex w-full justify-between relative">
             <div className="justify-self-start self-start">
@@ -56,7 +57,7 @@ const Footer = () => {
             </div>
 
             {/* LINKS */}
-            <ul className="flex gap-[45px] max-sm:max-md:gap-[25px] max-sm:max-md:flex-col max-sm:max-md:items-center uppercase font-[--pangram]">
+            <ul className="flex gap-[45px] max-lg:gap-[30px] max-sm:max-md:gap-[25px] max-sm:max-md:flex-col max-sm:max-md:items-center uppercase font-[--pangram]">
               <li>
                 <Link href="#aboutus">Biz haqimizda</Link>
               </li>
@@ -70,7 +71,15 @@ const Footer = () => {
                 <Link href="#contacts">Kontaktalar</Link>
               </li>
             </ul>
-            <div className=""></div>
+            <div></div>
+          </div>
+          {/* LOGO */}
+          <div className="w-full flex justify-center align-center">
+            <Image
+              src={logo}
+              alt="ilevel - Hayotning yangi darajasi!"
+              className="w-[365px]"
+            />
           </div>
           {/* THE SECOND ROW */}
           <div className="w-full flex justify-between">
@@ -107,7 +116,7 @@ const Footer = () => {
               </ul>
               <h1
                 className={
-                  "text-white/50 uppercase font-[400] leading-[21px] " +
+                  "text-white/50 text-[14px] uppercase font-[400] leading-[110%] " +
                   manropeM.className
                 }
               >
@@ -115,11 +124,11 @@ const Footer = () => {
               </h1>
             </div>
             {/* RIGHT SIDE */}
-            <div className="flex flex-col items-end gap-[35px]">
+            <div className="flex flex-col justify-end items-end gap-[35px]">
               {/* CONTACT US LINK*/}
               <Link
                 href="#contacts"
-                className="lg:flex hidden h-[50px] p-[3px] items-center border-white hover:border-primary hover:bg-[rgba(255,255,255,0.1)] border-[1px] rounded-[25px] mt-5 md:mt-0 transition-all duration-30 group"
+                className="md:flex hidden h-[50px] p-[3px] items-center border-white hover:border-primary hover:bg-[rgba(255,255,255,0.1)] border-[1px] rounded-[25px] mt-5 md:mt-0 transition-all duration-30 group"
               >
                 <p className="flex justify-center items-center px-[20px]">
                   Bog&apos;lanish
@@ -134,20 +143,20 @@ const Footer = () => {
               </Link>
               <h1
                 className={
-                  "uppercase text-[16px] font-[500]  " + manropeB.className
+                  "uppercase text-[14px] font-[500]  " + manropeB.className
                 }
               >
-                Разработано Vortex Agency
+                Разработано <span className="underline">Vortex Agency</span>
               </h1>
             </div>
           </div>
         </div>
       </Container>
-      <Image
+      {/* <Image
         src={lines}
         alt="lines"
-        className="max-w-[411px] w-full absolute bottom-[-30%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2 opacity-[50%]"
-      />
+        className="max-w-[411px] w-full absolute bottom-[-18%] z-[-1] lg:right-[80px] md:right-10 sm:right-5 right-2 opacity-[50%]"
+      /> */}
     </footer>
   );
 };

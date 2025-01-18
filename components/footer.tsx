@@ -9,7 +9,6 @@ import {
   YoutubeIcon,
 } from "@/public/assets/icons";
 import rec from "@/public/assets/rectangle.png";
-import lines from "@/public/assets/2d_lines.svg";
 import logo from "@/public/assets/slogan-logo.svg";
 import React from "react";
 import { Manrope } from "next/font/google";
